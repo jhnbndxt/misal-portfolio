@@ -5,23 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>John Benidict Misal</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="navbar.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" href="img-sources/fav-icon.png" />
 </head>
-<body>
-    <!-- LOGO (NOT IN HAMBURGER SIDEBAR) -->
+<body class="home-upgrade">
     <div class="logo">
-        <img src="img-sources/logo-hdr2.png" alt="Logo" />
+        <img src="img-sources/logo-hdr2.png" alt="John Creatives Logo" />
     </div>
 
-    <!-- HAMBURGER BUTTON -->
     <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
     </div>
 
-    <!-- SIDEBAR NAVIGATION (WITHOUT LOGO) -->
     <nav class="sidebar" id="sidebar">
         <ul class="menu">
             <li><a class="active" href="index.html">Home</a></li>
@@ -31,22 +29,71 @@
         </ul>
     </nav>
 
-    <!-- Rest of the content stays the same -->
-
-    <main class="content">
+    <main class="content home-content">
         <div class="profile-picture">
-            <img src="img-sources/my-image.png" alt="Profile Picture" />
+            <img src="img-sources/my-image.png" alt="John Benidict Misal" />
         </div>
         <div class="Home-Description">
-            <h3 class="intro">Hi, I'm John Benidict Misal👋</h3>
+            <h3 class="intro">Hi, I'm John Benidict Misal</h3>
             <h1 class="headline">Building digital experiences with<br />design, code, and creativity.</h1>
             <p class="description">
-                A College Student passionate about UI/UX design, video editing, and system development.<br />
-                Still learning the basics but continuously improving with every project and experience.
+                A 4th year BSIT student passionate about UI/UX design, web development, video editing,
+                and creative systems that are useful, clean, and meaningful.
             </p>
-            <a href="#demo-reel" class="connect-btn">Explore More</a>
+            <div class="home-tags" aria-label="Portfolio highlights">
+                <span>UI/UX Design</span>
+                <span>Web Development</span>
+                <span>Video Editing</span>
+            </div>
+            <div class="home-buttons">
+                <a href="#home-focus" class="connect-btn">Explore More</a>
+                <a href="artworks.html" class="outline-btn">View Projects</a>
+            </div>
         </div>
     </main>
+
+    <section id="home-focus" class="home-focus">
+        <div class="home-section-txt">
+            <p>Creative Focus</p>
+            <p>Blending technology and visual storytelling for school, freelance, and personal projects.</p>
+        </div>
+        <div class="focus-grid">
+            <div class="focus-card">
+                <h3>Interface Design</h3>
+                <p>Designing layouts, screens, and flows that make digital experiences easier to understand.</p>
+            </div>
+            <div class="focus-card">
+                <h3>System Development</h3>
+                <p>Building student projects with a growing foundation in web technologies and IT problem solving.</p>
+            </div>
+            <div class="focus-card">
+                <h3>Motion & Visuals</h3>
+                <p>Editing videos, creating posters, and shaping stories through visuals, pacing, and mood.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-preview">
+        <div class="home-section-txt">
+            <p>Featured Projects</p>
+            <p>A quick look at the kind of creative work you can explore in my portfolio.</p>
+        </div>
+        <div class="preview-grid">
+            <div class="preview-card">
+                <img src="img-sources/artwork1.png" alt="Product poster project" />
+                <h3>Poster Design</h3>
+            </div>
+            <div class="preview-card">
+                <img src="img-sources/slideshow1.jpg" alt="Creative project preview" />
+                <h3>Visual Storytelling</h3>
+            </div>
+            <div class="preview-card">
+                <img src="img-sources/artwork6.png" alt="Self poster project" />
+                <h3>Personal Branding</h3>
+            </div>
+        </div>
+        <a href="artworks.html" class="connect-btn preview-btn">See More Projects</a>
+    </section>
 
     <section id="demo-reel">
         <div class="demo-reel-txt">
@@ -54,8 +101,8 @@
             <p>A glimpse into my creativity through design, motion, and storytelling.</p>
         </div>
         <section class="video-section">
-            <video controls autoplay>
-                <source src="video-sources/demo-reel.mp4" type="video/mp4" />
+            <video controls muted playsinline poster="img-sources/slideshow2.jpg">
+                <source src="video-sources/demo-reel.MP4" type="video/mp4" />
             </video>
         </section>
     </section>
@@ -65,16 +112,24 @@
             <img src="img-sources/logo-foot.png" alt="John Creatives Logo" />
         </div>
         <div class="footer-line"></div>
-        <p class="footer-text">© 2025 John Creatives. All rights reserved.</p>
+        <p class="footer-text">Copyright 2026 John Creatives. All rights reserved.</p>
     </footer>
 
     <script>
         const hamburger = document.getElementById("hamburger");
         const sidebar = document.getElementById("sidebar");
+        const updateNavbar = () => {
+            document.body.classList.toggle("nav-scrolled", window.scrollY > 24);
+        };
 
         hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
             sidebar.classList.toggle("active");
+            document.body.classList.toggle("menu-open");
         });
+
+        updateNavbar();
+        window.addEventListener("scroll", updateNavbar);
     </script>
 </body>
 </html>

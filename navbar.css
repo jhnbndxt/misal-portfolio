@@ -1,0 +1,135 @@
+@keyframes navDrop {
+	from {
+		opacity: 0;
+		transform: translateY(-14px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (min-width: 769px) {
+	nav.sidebar {
+		position: sticky !important;
+		top: 0;
+		z-index: 900;
+		min-height: 92px;
+		padding: 6px 50px !important;
+		background: rgba(255, 255, 255, 0);
+		transition: min-height 0.3s ease, padding 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+		animation: navDrop 0.55s ease both;
+	}
+
+	body.nav-scrolled nav.sidebar {
+		min-height: 72px;
+		padding: 0 50px !important;
+		background: rgba(232, 242, 255, 0.86);
+		box-shadow: 0 10px 26px rgba(36, 52, 71, 0.12);
+		backdrop-filter: blur(14px);
+	}
+
+	nav.sidebar .logo img {
+		height: 118px;
+		width: auto;
+		transition: height 0.3s ease, transform 0.3s ease;
+	}
+
+	body.nav-scrolled nav.sidebar .logo img {
+		height: 78px;
+		transform: translateY(2px);
+	}
+
+	body.home-upgrade > .logo {
+		position: fixed;
+		top: 8px;
+		left: 45px;
+		z-index: 950;
+		transition: top 0.3s ease, filter 0.3s ease;
+	}
+
+	body.home-upgrade > .logo img {
+		width: 150px;
+		transition: width 0.3s ease;
+	}
+
+	body.home-upgrade.nav-scrolled > .logo {
+		top: 4px;
+		filter: drop-shadow(0 8px 12px rgba(36, 52, 71, 0.12));
+	}
+
+	body.home-upgrade.nav-scrolled > .logo img {
+		width: 104px;
+	}
+
+	body.home-upgrade nav.sidebar {
+		justify-content: flex-end;
+	}
+
+	nav.sidebar .menu {
+		align-items: center;
+		gap: 12px;
+	}
+
+	nav.sidebar .menu a {
+		border-radius: 25px;
+		padding: 9px 15px;
+		transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+	}
+
+	nav.sidebar .menu a::after {
+		left: 15px;
+		right: 15px;
+		bottom: 5px;
+		width: auto;
+		transform: scaleX(0);
+		transform-origin: center;
+		transition: transform 0.3s ease;
+	}
+
+	nav.sidebar .menu a:hover {
+		transform: translateY(-2px);
+		color: #134B70;
+		background: rgba(255, 255, 255, 0.55);
+	}
+
+	nav.sidebar .menu a:hover::after {
+		width: auto;
+		transform: scaleX(1);
+	}
+
+	nav.sidebar .menu a.active {
+		color: #134B70;
+		background: rgba(255, 255, 255, 0.72);
+		box-shadow: inset 0 0 0 1px rgba(19, 75, 112, 0.12);
+		transform: none;
+	}
+
+	body.nav-scrolled nav.sidebar .menu a {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.hamburger {
+		background: rgba(255, 255, 255, 0.78);
+		border: 1px solid rgba(19, 75, 112, 0.12);
+		border-radius: 12px;
+		box-shadow: 0 8px 18px rgba(36, 52, 71, 0.12);
+		padding: 10px;
+	}
+
+	nav.sidebar .menu a.active {
+		background: #225680;
+		color: white;
+	}
+
+	body.menu-open .hamburger {
+		background: #225680;
+	}
+
+	body.menu-open .hamburger span {
+		background-color: white;
+	}
+}
