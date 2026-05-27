@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>John Benidict Misal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="img-sources/fav-icon.png" />
+</head>
+<body>
+    <!-- LOGO (NOT IN HAMBURGER SIDEBAR) -->
+    <div class="logo">
+        <img src="img-sources/logo-hdr2.png" alt="Logo" />
+    </div>
+
+    <!-- HAMBURGER BUTTON -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- SIDEBAR NAVIGATION (WITHOUT LOGO) -->
+    <nav class="sidebar" id="sidebar">
+        <ul class="menu">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="artworks.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Rest of the content stays the same -->
+
+    <main class="content">
+        <div class="profile-picture">
+            <img src="img-sources/my-image.png" alt="Profile Picture" />
+        </div>
+        <div class="Home-Description">
+            <h3 class="intro">Hi, I'm John Benidict Misal👋</h3>
+            <h1 class="headline">Building digital experiences with<br />design, code, and creativity.</h1>
+            <p class="description">
+                A College Student passionate about UI/UX design, video editing, and system development.<br />
+                Still learning the basics but continuously improving with every project and experience.
+            </p>
+            <a href="#demo-reel" class="connect-btn">Explore More</a>
+        </div>
+    </main>
+
+    <section id="demo-reel">
+        <div class="demo-reel-txt">
+            <p>Vision in Motion</p>
+            <p>A glimpse into my creativity through design, motion, and storytelling.</p>
+        </div>
+        <section class="video-section">
+            <video controls autoplay>
+                <source src="video-sources/demo-reel.mp4" type="video/mp4" />
+            </video>
+        </section>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="img-sources/logo-foot.png" alt="John Creatives Logo" />
+        </div>
+        <div class="footer-line"></div>
+        <p class="footer-text">© 2025 John Creatives. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const sidebar = document.getElementById("sidebar");
+
+        hamburger.addEventListener("click", () => {
+            sidebar.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
