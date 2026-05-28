@@ -22,7 +22,9 @@
 
     <nav class="sidebar" id="sidebar">
         <div class="logo">
-            <img src="img-sources/logo-hdr2.png" alt="John Creatives Logo">
+            <a href="index.html" aria-label="Go to homepage">
+                <img src="img-sources/logo-hdr2.png" alt="John Creatives Logo">
+            </a>
         </div>
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
@@ -63,7 +65,7 @@
     </div>
 
     <div class="contact-form">
-        <form class="con-form">
+        <form class="con-form" id="contactForm">
             <div class="form-row">
                 <div class="input-form">
                     <input class="input-contact" type="text" id="name" name="name" placeholder="" autocomplete="name" required>
@@ -189,10 +191,13 @@
     <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
         <img src="https://api.iconify.design/lucide:arrow-up.svg" alt="">
     </button>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
         const hamburger = document.getElementById("hamburger");
         const sidebar = document.getElementById("sidebar");
         const backToTop = document.getElementById("backToTop");
+        const contactForm = document.getElementById("contactForm");
+        const contactSubmitButton = contactForm.querySelector(".button-contact");
         const updateNavbar = () => {
             document.body.classList.toggle("nav-scrolled", window.scrollY > 24);
             backToTop.classList.toggle("is-visible", window.scrollY > 650);
@@ -217,6 +222,31 @@
 
         backToTop.addEventListener("click", () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        contactForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            contactSubmitButton.disabled = true;
+            contactSubmitButton.textContent = "Sending...";
+
+            emailjs.sendForm(
+                "service_t34ovwl",
+                "template_mfyllirv",
+                e.target,
+                "hzchdA93gl0bW9Sk2v"
+            )
+            .then(() => {
+                alert("Message sent successfully!");
+                e.target.reset();
+            })
+            .catch((error) => {
+                console.log(error);
+                alert("Failed to send message.");
+            })
+            .finally(() => {
+                contactSubmitButton.disabled = false;
+                contactSubmitButton.textContent = "Send Message";
+            });
         });
     </script>
     <script src="motion.js"></script>

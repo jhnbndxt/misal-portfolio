@@ -72,21 +72,35 @@ nav.sidebar .logo {
 	flex: 0 0 auto;
 	margin: 0;
 	padding: 0;
-	min-width: 120px;
+	min-width: 170px;
+}
+
+nav.sidebar .logo a {
+	display: inline-flex;
+	align-items: center;
+	border-radius: 14px;
+	outline: 0;
 }
 
 nav.sidebar .logo img {
 	display: block;
 	width: auto !important;
-	height: 72px !important;
-	margin: -12px 0;
+	height: 96px !important;
+	margin: -18px 0;
 	border: 0;
 	border-radius: 0;
 	transition: height 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+	filter: drop-shadow(0 8px 14px rgba(36, 52, 71, 0.12));
+}
+
+nav.sidebar .logo a:hover img,
+nav.sidebar .logo a:focus-visible img {
+	transform: translateY(-2px) scale(1.05);
+	filter: drop-shadow(0 12px 18px rgba(34, 86, 128, 0.2));
 }
 
 body.nav-scrolled nav.sidebar .logo img {
-	height: 58px !important;
+	height: 76px !important;
 	filter: drop-shadow(0 8px 12px rgba(36, 52, 71, 0.1));
 }
 
@@ -281,12 +295,12 @@ body.home-upgrade .content {
 	}
 
 	nav.sidebar .logo img {
-		height: 66px !important;
-		margin: -10px 0;
+		height: 78px !important;
+		margin: -12px 0;
 	}
 
 	body.nav-scrolled nav.sidebar .logo img {
-		height: 56px !important;
+		height: 68px !important;
 	}
 
 	nav.sidebar .menu {

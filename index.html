@@ -21,7 +21,9 @@
 
     <nav class="sidebar" id="sidebar">
         <div class="logo">
-            <img src="img-sources/logo-hdr2.png" alt="John Creatives Logo" />
+            <a href="index.html" aria-label="Go to homepage">
+                <img src="img-sources/logo-hdr2.png" alt="John Creatives Logo" />
+            </a>
         </div>
         <ul class="menu">
             <li><a class="active" href="index.html">Home</a></li>
@@ -81,27 +83,27 @@
             <p>A quick look at the kind of creative work you can explore in my portfolio.</p>
         </div>
         <div class="preview-grid">
-            <div class="preview-card">
+            <a class="preview-card" href="artworks.html#photo-gallery-section" aria-label="View poster design project">
                 <img src="img-sources/artwork1.png" alt="Product poster project" />
                 <div class="preview-card-body">
                     <span>Visual Design</span>
                     <h3>Poster Design</h3>
                 </div>
-            </div>
-            <div class="preview-card">
+            </a>
+            <a class="preview-card" href="artworks.html#video-gallery-section" aria-label="View visual storytelling projects">
                 <img src="img-sources/slideshow1.jpg" alt="Creative project preview" />
                 <div class="preview-card-body">
                     <span>Motion Work</span>
                     <h3>Visual Storytelling</h3>
                 </div>
-            </div>
-            <div class="preview-card">
+            </a>
+            <a class="preview-card" href="artworks.html#photo-gallery-section" aria-label="View personal branding project">
                 <img src="img-sources/artwork6.png" alt="Self poster project" />
                 <div class="preview-card-body">
                     <span>Creative Identity</span>
                     <h3>Personal Branding</h3>
                 </div>
-            </div>
+            </a>
         </div>
         <a href="artworks.html" class="connect-btn preview-btn">See More Projects</a>
     </section>
@@ -112,7 +114,7 @@
             <p>A glimpse into my creativity through design, motion, and storytelling.</p>
         </div>
         <section class="video-section">
-            <video id="demoReelVideo" controls autoplay loop playsinline preload="auto" poster="img-sources/slideshow2.jpg">
+            <video id="demoReelVideo" controls autoplay muted loop playsinline preload="auto" poster="img-sources/demo-reel-poster.png">
                 <source src="video-sources/demo-reel.MP4" type="video/mp4" />
             </video>
         </section>
@@ -198,18 +200,8 @@
         const playDemoReel = () => {
             if (!demoReelVideo) return;
 
-            demoReelVideo.muted = false;
-            demoReelVideo.play().catch(() => {
-                const playAfterInteraction = () => {
-                    demoReelVideo.play().finally(() => {
-                        window.removeEventListener("pointerdown", playAfterInteraction);
-                        window.removeEventListener("keydown", playAfterInteraction);
-                    });
-                };
-
-                window.addEventListener("pointerdown", playAfterInteraction, { once: true });
-                window.addEventListener("keydown", playAfterInteraction, { once: true });
-            });
+            demoReelVideo.muted = true;
+            demoReelVideo.play().catch(() => {});
         };
 
         if ("IntersectionObserver" in window && demoReelVideo) {
@@ -224,7 +216,10 @@
             }, { threshold: 0.35 });
 
             reelObserver.observe(demoReelVideo);
+        } else {
+            playDemoReel();
         }
+
     </script>
     <script src="motion.js"></script>
 </body>
