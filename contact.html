@@ -6,6 +6,10 @@
     <title>Connect - John Benidict Misal</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="motion.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="contact.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="icon" type="image/png" href="img-sources/fav-icon.png">
 </head>
@@ -18,7 +22,7 @@
 
     <nav class="sidebar" id="sidebar">
         <div class="logo">
-            <img src="img-sources/logo-hdr2.png" alt="Logo">
+            <img src="img-sources/logo-hdr2.png" alt="John Creatives Logo">
         </div>
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
@@ -31,20 +35,23 @@
 	<section id="Contact-Page">
     <div class="Contact-top">
         <p>Contact</p>
-        <p>Let's Get in Touch!📲</p>
-        <p class="contact-description">Have questions or just want to say hello? Feel free to reach out! 
-		Whether you're interested in collaborations, commissions, or simply connecting, I'd love to hear from you. 
+        <p>Let's Get in Touch!</p>
+        <p class="contact-description">Have questions or just want to say hello? Feel free to reach out!
+		Whether you're interested in collaborations, commissions, or simply connecting, I'd love to hear from you.
 		Fill out the form below or contact me through social media. Let's create something amazing together!</p>
         
         <div class="contact-icon">
-            <a href="https://www.facebook.com/jhn.bndxt/" target="_blank" class="icon-button">
-                <img class="con-icon-pic" src="img-sources/fb-icon.png" alt="Facebook">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="icon-button" aria-label="LinkedIn">
+                <img class="con-icon-pic" src="https://api.iconify.design/lucide:linkedin.svg" alt="">
             </a>
-            <a href="https://www.instagram.com/jhn.bndxt?igsh=OGdoYWJkNm5tOGhp&utm_source=qr" target="_blank" class="icon-button">
-                <img class="con-icon-pic" src="img-sources/instagram-icon.png" alt="Instagram">
+            <a href="https://www.facebook.com/jhn.bndxt/" target="_blank" rel="noopener" class="icon-button" aria-label="Facebook">
+                <img class="con-icon-pic" src="https://api.iconify.design/lucide:facebook.svg" alt="">
             </a>
-            <a href="https://www.youtube.com/@MisalJohnBenidict" target="_blank" class="icon-button">
-                <img class="con-icon-pic" src="img-sources/youtube-icon.png" alt="YouTube">
+            <a href="https://www.instagram.com/jhn.bndxt?igsh=OGdoYWJkNm5tOGhp&utm_source=qr" target="_blank" rel="noopener" class="icon-button" aria-label="Instagram">
+                <img class="con-icon-pic" src="https://api.iconify.design/lucide:instagram.svg" alt="">
+            </a>
+            <a href="https://www.youtube.com/@MisalJohnBenidict" target="_blank" rel="noopener" class="icon-button" aria-label="YouTube">
+                <img class="con-icon-pic" src="https://api.iconify.design/lucide:youtube.svg" alt="">
             </a>
         </div>
     </div>
@@ -59,70 +66,78 @@
         <form class="con-form">
             <div class="form-row">
                 <div class="input-form">
-                    <input class="input-contact" type="text" id="name" placeholder="" required>
+                    <input class="input-contact" type="text" id="name" name="name" placeholder="" autocomplete="name" required>
                     <label class="label-contact" for="name">Name</label>
                 </div>
 
                 <div class="input-form">
-                    <input class="input-contact" type="text" id="number" placeholder="" required>
+                    <input class="input-contact" type="tel" id="number" name="phone" placeholder="" autocomplete="tel" required>
                     <label class="label-contact" for="number">Phone</label>
                 </div>
             </div>
 
             <div class="input-form">
-				<input class="input-contact" type="email" id="email" placeholder="" required>
+				<input class="input-contact" type="email" id="email" name="email" placeholder="" autocomplete="email" required>
 				<label class="label-contact" for="email">Email</label>
 			</div>
 
             <div class="input-form">
-                <textarea class="textarea-contact" id="message" rows="8" placeholder="" required></textarea>
+                <textarea class="textarea-contact" id="message" name="message" rows="8" placeholder="" required></textarea>
                 <label class="label-contact" for="message">Message</label>
             </div>
 
             <div class="btn-form">
-                <button class="button-contact" type="submit">Submit</button>
+                <button class="button-contact" type="submit">Send Message</button>
             </div>
         </form>
     </div>
 	
 	<section class="below-contact">
+    <div class="below-contact-heading">
+        <p>Contact Details</p>
+        <h2>Choose the easiest way to reach me.</h2>
+    </div>
     <div class="contact-below-container">
-        <div class="below-contact-box1">
+        <a class="below-contact-box1" href="tel:+639665491732">
             <div class="box-header">
-                <img class="below-con-icon" src="img-sources/telephone-icon.png" alt="Phone">
+                <img class="below-con-icon" src="https://api.iconify.design/lucide:phone-call.svg" alt="">
                 <p class="contact-info">+63 966 549 1732</p>
             </div>
             <p class="contact-description">
                 Feel free to call or text me for inquiries, support, or assistance. I'm available from 9 AM to 6 PM (GMT+8).
             </p>
-        </div>
+        </a>
 
-        <div class="below-contact-box2">
+        <a class="below-contact-box2" href="mailto:jhnbndct.edu022@gmail.com">
             <div class="box-header">
-                <img class="below-con-icon" src="img-sources/email-icon.png" alt="Email">
+                <img class="below-con-icon" src="https://api.iconify.design/lucide:mail.svg" alt="">
                 <p class="contact-info">jhnbndct.edu022@gmail.com</p>
             </div>
             <p class="contact-description">
                 Send me an email for business inquiries, collaboration opportunities, or any questions. I typically respond within 24 hours.
             </p>
-        </div>
+        </a>
 
-        <div class="below-contact-box3">
+        <a class="below-contact-box3" href="https://t.me/jhnbndxt022" target="_blank" rel="noopener">
             <div class="box-header">
-                <img class="below-con-icon" src="img-sources/telegram-icon.png" alt="Telegram">
+                <img class="below-con-icon" src="https://api.iconify.design/lucide:send.svg" alt="">
                 <p class="contact-info">@jhnbndxt022</p>
             </div>
             <p class="contact-description">
                 Message me on Telegram for quick updates, direct communication, or any assistance you need. I'm online most of the day!
             </p>
-        </div>
+        </a>
     </div>
 </section>
 
 <section class="map-container">
+    <div class="map-heading">
+        <p>Location</p>
+        <h2>Find me around Valenzuela City.</h2>
+    </div>
     <div class="map-wrapper">
         <div class="map">
-            <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d241.17316191026967!2d120.92970460582653!3d14.72555812495204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1741338944474!5m2!1sen!2sph" 
+            <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15436.68968878353!2d120.93091278715818!3d14.702839399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b37a692e14c7%3A0x30bcf9b9cc473a6d!2sP.ramos%20st.%20Palasan%20valenzuela%20city!5e0!3m2!1sen!2sph!4v1779965596572!5m2!1sen!2sph"
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
@@ -131,17 +146,56 @@
 
 
   <footer class="footer">
-        <div class="footer-logo">
-            <img src="img-sources/logo-foot.png" alt="John Creatives Logo">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <img src="img-sources/logo-hdr2.png" alt="John Creatives Logo">
+                <p>Designing useful digital experiences through code, visuals, and storytelling.</p>
+                <a class="footer-download" href="pdf-sources/John_CV.pdf" download>
+                    <img src="https://api.iconify.design/lucide:download.svg" alt="">
+                    Download CV
+                </a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Me</h3>
+                <a href="mailto:jhnbndct.edu022@gmail.com"><span><img src="https://api.iconify.design/lucide:mail.svg" alt=""></span> jhnbndct.edu022@gmail.com</a>
+                <a href="tel:+639665491732"><span><img src="https://api.iconify.design/lucide:phone.svg" alt=""></span> +63 966 549 1732</a>
+                <p><span><img src="https://api.iconify.design/lucide:map-pin.svg" alt=""></span> Valenzuela, Metro Manila</p>
+            </div>
+            <div class="footer-quicklinks">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home <span>-></span></a>
+                <a href="about.html">About <span>-></span></a>
+                <a href="artworks.html">Projects <span>-></span></a>
+                <a href="contact.html">Contact <span>-></span></a>
+            </div>
+            <div class="footer-socials">
+                <h3>Socials</h3>
+                <div class="social-icons">
+                    <a class="social-icon linkedin-icon" href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">in</a>
+                    <a class="social-icon" href="https://www.facebook.com/jhn.bndxt/" target="_blank" aria-label="Facebook">
+                        <img src="img-sources/fb-icon.png" alt="">
+                    </a>
+                    <a class="social-icon" href="https://www.instagram.com/jhn.bndxt?igsh=OGdoYWJkNm5tOGhp&utm_source=qr" target="_blank" aria-label="Instagram">
+                        <img src="img-sources/instagram-icon.png" alt="">
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="footer-line"></div>
-        <p class="footer-text">© 2025 John Creatives. All rights reserved.</p>
+        <div class="footer-bottom">
+            <p>Copyright 2026 <strong>John Creatives.</strong> All rights reserved.</p>
+            <p>Built with passion, code, and creativity.</p>
+        </div>
     </footer>
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+        <img src="https://api.iconify.design/lucide:arrow-up.svg" alt="">
+    </button>
     <script>
         const hamburger = document.getElementById("hamburger");
         const sidebar = document.getElementById("sidebar");
+        const backToTop = document.getElementById("backToTop");
         const updateNavbar = () => {
             document.body.classList.toggle("nav-scrolled", window.scrollY > 24);
+            backToTop.classList.toggle("is-visible", window.scrollY > 650);
         };
 
         hamburger.addEventListener("click", () => {
@@ -150,8 +204,21 @@
             document.body.classList.toggle("menu-open");
         });
 
+        sidebar.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                sidebar.classList.remove("active");
+                document.body.classList.remove("menu-open");
+            });
+        });
+
         updateNavbar();
         window.addEventListener("scroll", updateNavbar);
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
     </script>
+    <script src="motion.js"></script>
 </body>
 </html>

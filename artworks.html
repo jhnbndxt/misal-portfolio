@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artworks - John Benidict Misal</title>
+    <title>Projects - John Benidict Misal</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="motion.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="projects.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-	<link rel="icon" type="image/png" href="img-sources/fav-icon.png">
+    <link rel="icon" type="image/png" href="img-sources/fav-icon.png">
 </head>
 <body>
     <div class="hamburger" id="hamburger">
@@ -18,7 +22,7 @@
 
     <nav class="sidebar" id="sidebar">
         <div class="logo">
-            <img src="img-sources/logo-hdr2.png" alt="Logo">
+            <img src="img-sources/logo-hdr2.png" alt="John Creatives Logo">
         </div>
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
@@ -28,171 +32,256 @@
         </ul>
     </nav>
 
-   <main class="art-content">
-    <section id="project-page">
-        <div class="project-top">
-            <p>Projects</p>
-            <p>Where creativity meets canvas, turning dreams into timeless expressions.</p>
-            <p class="project-description">Step into my creative world, where every piece tells a story beyond lines and colors. 
-            Though I may not be a traditional illustrator, art is not confined to a single form—it's an expression, a vision, a feeling brought to life. 
-            Here, I showcase the diverse creations that reflect my passion, proving that art is for everyone, regardless of skill or medium.</p>
-        </div>
+    <main class="art-content projects-classic">
+        <section id="project-page">
+            <div class="project-top">
+                <p>Projects</p>
+                <p>Where creativity meets canvas, turning dreams into timeless expressions.</p>
+                <p class="project-description">
+                    Step into my creative world, where every piece tells a story beyond lines and colors.
+                    Though I may not be a traditional illustrator, art is not confined to a single form. It is an expression,
+                    a vision, and a feeling brought to life.
+                </p>
+            </div>
 
-        <div class="project-buttons">
-            <a href="#photo-gallery-section" class="connect-btn">View Images Projects</a>
-            <a href="#video-gallery-section" class="connect-btn">View Videos Projects</a>
-        </div>
-    </section>
-
-    <section class="slideshow-container">
-        <div class="slideshow">
-            <div class="slide"><img src="img-sources/slideshow1.jpg" alt="Artwork 1"></div>
-            <div class="slide"><img src="img-sources/slideshow2.jpg" alt="Artwork 2"></div>
-            <div class="slide"><img src="img-sources/slideshow1.jpg" alt="Artwork 3"></div>
-            <div class="slide"><img src="img-sources/slideshow2.jpg" alt="Artwork 4"></div>
-            <div class="slide"><img src="img-sources/slideshow1.jpg" alt="Artwork 5"></div>
-        </div>
-    </section>
-
-    <!-- Photo Gallery Section -->
-    <section id="photo-gallery-section" class="gallery-section">
-        <h3 class="section-title">Photo</h3>
-        <h2 class="section-subtext">Explore a collection of stunning artworks that showcase creativity and passion.</h2>
-
-        <section id="photo-gallery" class="photo-gallery">
-            <div class="photo-card"><img src="img-sources/artwork1.png" alt="Artwork 1"><h3>Product Poster</h3><p>This is a milk drink poster I created. It’s my first time designing a product poster, and it was a lot of fun!</p></div>
-            <div class="photo-card"><img src="img-sources/artwork2.png" alt="Artwork 2"><h3>Character Design 1</h3><p>This is Tanjiro Kamado, a character I chose for our character design activity.</p></div>
-            <div class="photo-card"><img src="img-sources/artwork3.png" alt="Artwork 3"><h3>Character Design 2</h3><p>This is Ben10, the character I drew in Photoshop for our hands-on activity in Character Design 2.</p></div>
-            <div class="photo-card"><img src="img-sources/artwork4.png" alt="Artwork 4"><h3>Typography Art</h3><p>This is a typography art project from our Reading Visual Art activity, created using Adobe Illustrator.</p></div>
-            <div class="photo-card"><img src="img-sources/artwork5.png" alt="Artwork 5"><h3>Meal Poster</h3><p>I created this comic-style poster for our Pathfit meal of the day task. It was really cool!</p></div>
-            <div class="photo-card"><img src="img-sources/artwork6.png" alt="Artwork 6"><h3>Self Poster</h3><p>This was created to advertise ourselves as part of a hands-on activity in Multimedia, designed in Photoshop.</p></div>
-            <div class="photo-card"><img src="img-sources/artwork7.png" alt="Artwork 7"><h3>Pointilism Art</h3><p>A pointillism artwork created digitally using Adobe Illustrator, focusing on precision and detail.</p></div>
+            <div class="project-buttons">
+                <a href="#photo-gallery-section" class="connect-btn">View Image Projects</a>
+                <a href="#video-gallery-section" class="connect-btn">View Video Projects</a>
+            </div>
         </section>
-    </section>
 
-  <!-- Video Gallery Section -->
-<section id="video-gallery-section" class="gallery-section">
-    <h3 class="section-title">Videos</h3>
-    <h2 class="section-subtext">Watch creative process and visual storytelling through motion.</h2>
-    <section id="video-gallery" class="video-gallery">
-        <div class="video-card">
-			<video controls autoplay>
-				<source src="video-sources/videoproject1.mp4" type="video/mp4">
-			</video>
-			<h3>Wedding of Dianne and Jairus</h3>
-			<p>Dianne and Jairus’ wedding was my first experience editing a wedding video as a freelancer. It presented several challenges, but ultimately proved to be rewarding. I made sure every special moment was captured perfectly. This project not only helped me improve my editing abilities but also boosted my confidence, pushing me to take on additional freelance assignments.</p>
-			<div class="project-buttons">
-				<a href="https://youtu.be/5AGV7E96uyI" target="_blank" class="project-btn">Watch on YouTube</a>
-			</div>
-		</div>
-        <div class="video-card">
-            <video controls>
-                <source src="video-sources/videoproject2.mp4" type="video/mp4">
-            </video>
-            <h3>Lupang Sinilangan: A Documentary Film</h3>Lupang Sinilangan is a documentary focusing on the issue of land pollution. We traveled to Pinalagad, also known as Tambakan ng Basura, a site overwhelmed by trash and disregard. Through interviews and on-location footage, we showcased the grim truth about how pollution harms both the environment and the local community.</p>
-            <div class="project-buttons">
-                <a href="https://youtu.be/txgIorTmNNQ" target="_blank" class="project-btn">Watch on YouTube</a>
-            </div>
-        </div>
-        <div class="video-card">
-            <video controls>
-                <source src="video-sources/videoproject3.mp4" type="video/mp4">
-            </video>
-            <h3>Fleeting Glimpses</h3>
-            <p>Fleeting Glimpse is a story of friendship—one that was once strong but slowly faded with time. As life's challenges pulled them in different directions, their shared memories began to blur. In the end, they are left wondering if the bond they once had was real or just a fleeting moment lost to time.</p>
-            <div class="project-buttons">
-                <a href="https://youtu.be/7u-VFbTcP1I" target="_blank" class="project-btn">Watch on YouTube</a>
-            </div>
-        </div>
-		
-		<div class="video-card">
-            <video controls>
-                <source src="video-sources/videoproject4.mp4" type="video/mp4">
-            </video>
-            <h3>Ang Binhi ng Kapayapaan</h3>
-            <p>Ang Binhi ng Kapayapaan tells the story of a man who discovers a hidden garden, a peaceful sanctuary that holds the key to healing a chaotic town. In this secret garden, a group of passionate individuals has been secretly planning to restore balance and harmony to the community. As the man becomes involved, he learns that peace begins with small, deliberate actions, and the garden becomes a symbol of hope and transformation for the entire town.</p>
-            <div class="project-buttons">
-                <a href="https://www.youtube.com/watch?si=yH1kNgy_5UxVeUQe&v=wGpCYgH0Dwo&feature=youtu.be" target="_blank" class="project-btn">Watch on YouTube</a>
-            </div>
-        </div>
-		
-		<div class="video-card">
-            <video controls>
-                <source src="video-sources/videoproject5.mp4" type="video/mp4">
-            </video>
-			
-            <h3>A Day in My Life</h3>
-            <p>A Day in My Life, as a BSIT Student at Pamantasan ng Lungsod ng Valenzuela gives an inside look into the daily routines and challenges faced by a student pursuing a degree in Information Technology. From early morning classes to late-night study sessions, every day is a mix of learning, problem-solving, and personal growth. The experience is not just about academic achievements but also about building connections preparing for the future in the world of technology.</p>
-            <div class="project-buttons">
-                <a href="https://www.youtube.com/watch?v=rj2SP7ADpg4" target="_blank" class="project-btn">Watch on YouTube</a>
-            </div>
-        </div>
-		
-		<div class="video-card">
-            <video controls>
-                <source src="video-sources/videoproject6.mp4" type="video/mp4">
-            </video>
-            <h3>Mathematical Logic</h3>
-            <p>Mathematical Logic is a video lesson that delves into the foundational concepts of logic in mathematics. It covers key topics such as propositions, logical connectives, truth tables, and formal proofs, providing a clear understanding of how logic shapes mathematical reasoning. By the end of the lesson, viewers will have a solid grasp of how mathematical logic is applied in various fields, from computer science to philosophy.</p>
-            <div class="project-buttons">
-                <a href="https://www.youtube.com/watch?v=B8IbI0zv1E4" target="_blank" class="project-btn">Watch on YouTube</a>
-            </div>
-        </div>
-		
-		<div class="video-card">
-            <video controls>
-                <source src="video-sources/videoproject7.mp4" type="video/mp4">
-            </video>
-            <h3>Dado Banatao's Invetion</h3>
-            <p>This video on Dado Banatao’s creation of the microchip examines his trailblazing impact on the tech world. It focuses on how Banatao, a Filipino-American engineer, was instrumental in developing the microchip that transformed computing. The video guides viewers through his journey, highlighting his groundbreaking designs, including the first-ever system logic chip that set the stage for today’s computer technology.</p>
-            <div class="project-buttons">
-                <a href="https://www.youtube.com/watch?v=TA3lZ3rcER8" target="_blank" class="project-btn">Watch on YouTube</a>
-            </div>
-        </div>
-		
-		<div class="video-card">
-            <video controls>
-                <source src="video-sources/videoproject8.mp4" type="video/mp4">
-            </video>
-            <h3>Introduction</h3>
-            <p>The video is an introduction of myself, where I answer questions that are closely related to the subject of Ethics. I discuss my personal understanding of ethical principles and how they shape my decisions in both my personal and academic life. Throughout the video, I reflect on key ethical issues, sharing how I approach moral dilemmas and the values I hold most important. </p>
-            <div class="project-buttons">
-                <a href="https://www.youtube.com/watch?v=54VdDZHU8P0" target="_blank" class="project-btn">Watch on YouTube</a>
-            </div>
-        </div>
-	
-	<div class="video-card">
-            <video controls>
-                <source src="video-sources/videoproject9.mp4" type="video/mp4">
-            </video>
-            <h3>Pathfit - Fitness Plan Exercise</h3>
-            <p>Pathfit - Fitness Plan Exercise is about my week of following a structured fitness plan that I created for myself. Each day, I focused on different workouts designed to improve my strength, endurance, and flexibility. Throughout the week, I tracked my progress, noting improvements in both my physical capabilities and overall energy levels. </p>
-            <div class="project-buttons">
-                <a href="https://www.youtube.com/watch?v=3zyxB6iPx0M" target="_blank" class="project-btn">Watch on YouTube</a>
-            </div>
-        </div>
-		
-	
-    </section>
-</section>
+        <section id="photo-gallery-section" class="gallery-section">
+            <h3 class="section-title">Photo</h3>
+            <h2 class="section-subtext">Explore a collection of artworks that showcase creativity and passion.</h2>
 
+            <section id="photo-gallery" class="photo-gallery">
+                <div class="photo-card">
+                    <h3>Product Poster</h3>
+                    <img src="img-sources/artwork1.png" alt="Product poster project">
+                    <p>This milk drink poster was one of my first product poster designs, focused on playful layout and clean visual hierarchy.</p>
+                    <div class="project-card-tags"><span>Adobe Photoshop</span><span>Poster Layout</span></div>
+                </div>
+                <div class="photo-card">
+                    <h3>Character Design 1</h3>
+                    <img src="img-sources/artwork2.png" alt="Tanjiro character design project">
+                    <p>A character design activity featuring Tanjiro Kamado, created to practice form, color, and visual detail.</p>
+                    <div class="project-card-tags"><span>Adobe Photoshop</span><span>Digital Illustration</span></div>
+                </div>
+                <div class="photo-card">
+                    <h3>Character Design 2</h3>
+                    <img src="img-sources/artwork3.png" alt="Ben10 character design project">
+                    <p>A Photoshop hands-on activity based on Ben10, focused on character styling and digital composition.</p>
+                    <div class="project-card-tags"><span>Adobe Photoshop</span><span>Vector Tracing</span></div>
+                </div>
+                <div class="photo-card">
+                    <h3>Typography Art</h3>
+                    <img src="img-sources/artwork4.png" alt="Typography art project">
+                    <p>A visual art activity using typography and Adobe Illustrator to turn text into an expressive composition.</p>
+                    <div class="project-card-tags"><span>Adobe Illustrator</span><span>Typography</span></div>
+                </div>
+                <div class="photo-card">
+                    <h3>Meal Poster</h3>
+                    <img src="img-sources/artwork5.png" alt="Meal poster project">
+                    <p>A comic-style meal poster created for a Pathfit task, using bold colors and energetic visual treatment.</p>
+                    <div class="project-card-tags"><span>Canva</span><span>Layout Design</span><span>Typography</span><span>Graphic Design</span><span>Visual Composition</span></div>
+                </div>
+                <div class="photo-card">
+                    <h3>Self Poster</h3>
+                    <img src="img-sources/artwork6.png" alt="Self poster project">
+                    <p>A personal branding poster made for a multimedia activity, designed to present identity through layout and style.</p>
+                    <div class="project-card-tags"><span>Adobe Photoshop</span><span>Photo Editing</span></div>
+                </div>
+                <div class="photo-card">
+                    <h3>Pointillism Art</h3>
+                    <img src="img-sources/artwork7.png" alt="Pointillism art project">
+                    <p>A digital pointillism artwork created with attention to precision, texture, and small visual details.</p>
+                    <div class="project-card-tags"><span>Hand-Drawn Tracing</span><span>Traditional Art</span><span>Illustration</span><span>Detail Rendering</span><span>Creativity</span></div>
+                </div>
+            </section>
+        </section>
 
-</main>
+        <section id="video-gallery-section" class="gallery-section">
+            <h3 class="section-title">Videos</h3>
+            <h2 class="section-subtext">Watch creative process and visual storytelling through motion.</h2>
 
+            <section id="video-gallery" class="video-gallery">
+                <div class="video-card">
+                    <h3>Wedding of Dianne and Jairus</h3>
+                    <a class="youtube-preview" href="https://youtu.be/5AGV7E96uyI" target="_blank" aria-label="Watch Wedding of Dianne and Jairus on YouTube">
+                        <img src="https://img.youtube.com/vi/5AGV7E96uyI/hqdefault.jpg" alt="Wedding of Dianne and Jairus video thumbnail">
+                        <span>Watch on YouTube</span>
+                    </a>
+                    <p>My first freelance wedding edit, focused on capturing emotion, pacing, and memorable moments.</p>
+                    <div class="project-buttons">
+                        <a href="https://youtu.be/5AGV7E96uyI" target="_blank" class="project-btn">Watch on YouTube</a>
+                    </div>
+                    <div class="project-card-tags"><span>CapCut</span><span>iMovie</span><span>Video Editing</span><span>Wedding Editing</span><span>Cinematic Editing</span><span>Storytelling</span></div>
+                </div>
+                <div class="video-card">
+                    <h3>Lupang Sinilangan: A Documentary Film</h3>
+                    <a class="youtube-preview" href="https://youtu.be/txgIorTmNNQ" target="_blank" aria-label="Watch Lupang Sinilangan on YouTube">
+                        <img src="https://img.youtube.com/vi/txgIorTmNNQ/hqdefault.jpg" alt="Lupang Sinilangan video thumbnail">
+                        <span>Watch on YouTube</span>
+                    </a>
+                    <p>A documentary about land pollution and its effect on the environment and local community.</p>
+                    <div class="project-buttons">
+                        <a href="https://youtu.be/txgIorTmNNQ" target="_blank" class="project-btn">Watch on YouTube</a>
+                    </div>
+                    <div class="project-card-tags"><span>Videography</span><span>Video Editing</span><span>Color Grading</span><span>Documentary Production</span><span>CapCut</span><span>iMovie</span><span>Cinematic Storytelling</span></div>
+                </div>
+                <div class="video-card">
+                    <h3>Fleeting Glimpses</h3>
+                    <a class="youtube-preview" href="https://youtu.be/7u-VFbTcP1I" target="_blank" aria-label="Watch Fleeting Glimpses on YouTube">
+                        <img src="https://img.youtube.com/vi/7u-VFbTcP1I/hqdefault.jpg" alt="Fleeting Glimpses video thumbnail">
+                        <span>Watch on YouTube</span>
+                    </a>
+                    <p>A short story about friendship, distance, and memories that slowly fade with time.</p>
+                    <div class="project-buttons">
+                        <a href="https://youtu.be/7u-VFbTcP1I" target="_blank" class="project-btn">Watch on YouTube</a>
+                    </div>
+                    <div class="project-card-tags"><span>Videography</span><span>Video Editing</span><span>Color Grading</span><span>Short Film Production</span><span>CapCut</span><span>iMovie</span><span>Storytelling</span></div>
+                </div>
+                <div class="video-card">
+                    <h3>Ang Binhi ng Kapayapaan</h3>
+                    <a class="youtube-preview" href="https://www.youtube.com/watch?v=wGpCYgH0Dwo" target="_blank" aria-label="Watch Ang Binhi ng Kapayapaan on YouTube">
+                        <img src="https://img.youtube.com/vi/wGpCYgH0Dwo/hqdefault.jpg" alt="Ang Binhi ng Kapayapaan video thumbnail">
+                        <span>Watch on YouTube</span>
+                    </a>
+                    <p>A narrative about hope, peace, and small actions that can transform a community.</p>
+                    <div class="project-buttons">
+                        <a href="https://www.youtube.com/watch?v=wGpCYgH0Dwo" target="_blank" class="project-btn">Watch on YouTube</a>
+                    </div>
+                    <div class="project-card-tags"><span>Canva</span><span>CapCut</span><span>Video Editing</span><span>Visual Storytelling</span></div>
+                </div>
+                <div class="video-card">
+                    <h3>A Day in My Life</h3>
+                    <a class="youtube-preview" href="https://www.youtube.com/watch?v=rj2SP7ADpg4" target="_blank" aria-label="Watch A Day in My Life on YouTube">
+                        <img src="https://img.youtube.com/vi/rj2SP7ADpg4/hqdefault.jpg" alt="A Day in My Life video thumbnail">
+                        <span>Watch on YouTube</span>
+                    </a>
+                    <p>A glimpse into the routine, challenges, and growth of a BSIT student.</p>
+                    <div class="project-buttons">
+                        <a href="https://www.youtube.com/watch?v=rj2SP7ADpg4" target="_blank" class="project-btn">Watch on YouTube</a>
+                    </div>
+                    <div class="project-card-tags"><span>PowerPoint</span><span>Canva</span><span>CapCut</span><span>Presentation Design</span><span>Video Editing</span><span>Content Creation</span></div>
+                </div>
+                <div class="video-card">
+                    <h3>Mathematical Logic</h3>
+                    <a class="youtube-preview" href="https://www.youtube.com/watch?v=B8IbI0zv1E4" target="_blank" aria-label="Watch Mathematical Logic on YouTube">
+                        <img src="https://img.youtube.com/vi/B8IbI0zv1E4/hqdefault.jpg" alt="Mathematical Logic video thumbnail">
+                        <span>Watch on YouTube</span>
+                    </a>
+                    <p>A video lesson explaining propositions, logical connectives, truth tables, and reasoning.</p>
+                    <div class="project-buttons">
+                        <a href="https://www.youtube.com/watch?v=B8IbI0zv1E4" target="_blank" class="project-btn">Watch on YouTube</a>
+                    </div>
+                    <div class="project-card-tags"><span>Canva</span><span>CapCut</span><span>iMovie</span><span>Educational Content Design</span><span>Video Editing</span><span>Presentation Editing</span></div>
+                </div>
+                <div class="video-card">
+                    <h3>Dado Banatao's Invention</h3>
+                    <a class="youtube-preview" href="https://www.youtube.com/watch?v=TA3lZ3rcER8" target="_blank" aria-label="Watch Dado Banatao's Invention on YouTube">
+                        <img src="https://img.youtube.com/vi/TA3lZ3rcER8/hqdefault.jpg" alt="Dado Banatao's Invention video thumbnail">
+                        <span>Watch on YouTube</span>
+                    </a>
+                    <p>A presentation about Dado Banatao's impact on computing and chip technology.</p>
+                    <div class="project-buttons">
+                        <a href="https://www.youtube.com/watch?v=TA3lZ3rcER8" target="_blank" class="project-btn">Watch on YouTube</a>
+                    </div>
+                    <div class="project-card-tags"><span>CapCut</span><span>iMovie</span><span>Videography</span><span>Video Editing</span><span>Informative Storytelling</span><span>Documentary Editing</span></div>
+                </div>
+                <div class="video-card">
+                    <h3>Introduction</h3>
+                    <a class="youtube-preview" href="https://www.youtube.com/watch?v=54VdDZHU8P0" target="_blank" aria-label="Watch Introduction on YouTube">
+                        <img src="https://img.youtube.com/vi/54VdDZHU8P0/hqdefault.jpg" alt="Introduction video thumbnail">
+                        <span>Watch on YouTube</span>
+                    </a>
+                    <p>A personal introduction and reflection connected to ethics and decision-making.</p>
+                    <div class="project-buttons">
+                        <a href="https://www.youtube.com/watch?v=54VdDZHU8P0" target="_blank" class="project-btn">Watch on YouTube</a>
+                    </div>
+                    <div class="project-card-tags"><span>CapCut</span><span>Alight Motion</span><span>Motion Graphics</span><span>Video Editing</span><span>Transition Effects</span><span>Creative Editing</span></div>
+                </div>
+                <div class="video-card">
+                    <h3>Pathfit - Fitness Plan Exercise</h3>
+                    <a class="youtube-preview" href="https://www.youtube.com/watch?v=3zyxB6iPx0M" target="_blank" aria-label="Watch Pathfit - Fitness Plan Exercise on YouTube">
+                        <img src="https://img.youtube.com/vi/3zyxB6iPx0M/hqdefault.jpg" alt="Pathfit - Fitness Plan Exercise video thumbnail">
+                        <span>Watch on YouTube</span>
+                    </a>
+                    <p>A weekly fitness plan documentation focused on progress, discipline, and consistency.</p>
+                    <div class="project-buttons">
+                        <a href="https://www.youtube.com/watch?v=3zyxB6iPx0M" target="_blank" class="project-btn">Watch on YouTube</a>
+                    </div>
+                    <div class="project-card-tags"><span>Videography</span><span>PowerPoint</span><span>Canva</span><span>CapCut</span><span>Fitness Presentation Design</span><span>Video Documentation</span></div>
+                </div>
+                <div class="video-card">
+                    <h3>Hari ng Kalsada - Game Advertisement</h3>
+                    <a class="youtube-preview" href="https://youtu.be/H2V9aHUftBk" target="_blank" aria-label="Watch Hari ng Kalsada - Game Advertisement on YouTube">
+                        <img src="https://img.youtube.com/vi/H2V9aHUftBk/hqdefault.jpg" alt="Hari ng Kalsada - Game Advertisement video thumbnail">
+                        <span>Watch on YouTube</span>
+                    </a>
+                    <p>A game advertisement video project focused on energetic pacing, promotional visuals, and creative presentation.</p>
+                    <div class="project-buttons">
+                        <a href="https://youtu.be/H2V9aHUftBk" target="_blank" class="project-btn">Watch on YouTube</a>
+                    </div>
+                    <div class="project-card-tags"><span>CapCut</span><span>Videography</span><span>Video Editing</span><span>Advertisement Design</span><span>Promotional Editing</span><span>Creative Direction</span></div>
+                </div>
+            </section>
+        </section>
     </main>
 
     <footer class="footer">
-        <div class="footer-logo">
-            <img src="img-sources/logo-foot.png" alt="John Creatives Logo">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <img src="img-sources/logo-hdr2.png" alt="John Creatives Logo">
+                <p>Designing useful digital experiences through code, visuals, and storytelling.</p>
+                <a class="footer-download" href="pdf-sources/John_CV.pdf" download>
+                    <img src="https://api.iconify.design/lucide:download.svg" alt="">
+                    Download CV
+                </a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Me</h3>
+                <a href="mailto:jhnbndct.edu022@gmail.com"><span><img src="https://api.iconify.design/lucide:mail.svg" alt=""></span> jhnbndct.edu022@gmail.com</a>
+                <a href="tel:+639665491732"><span><img src="https://api.iconify.design/lucide:phone.svg" alt=""></span> +63 966 549 1732</a>
+                <p><span><img src="https://api.iconify.design/lucide:map-pin.svg" alt=""></span> Valenzuela, Metro Manila</p>
+            </div>
+            <div class="footer-quicklinks">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home <span>-></span></a>
+                <a href="about.html">About <span>-></span></a>
+                <a href="artworks.html">Projects <span>-></span></a>
+                <a href="contact.html">Contact <span>-></span></a>
+            </div>
+            <div class="footer-socials">
+                <h3>Socials</h3>
+                <div class="social-icons">
+                    <a class="social-icon linkedin-icon" href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">in</a>
+                    <a class="social-icon" href="https://www.facebook.com/jhn.bndxt/" target="_blank" aria-label="Facebook">
+                        <img src="img-sources/fb-icon.png" alt="">
+                    </a>
+                    <a class="social-icon" href="https://www.instagram.com/jhn.bndxt?igsh=OGdoYWJkNm5tOGhp&utm_source=qr" target="_blank" aria-label="Instagram">
+                        <img src="img-sources/instagram-icon.png" alt="">
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="footer-line"></div>
-        <p class="footer-text">© 2025 John Creatives. All rights reserved.</p>
+        <div class="footer-bottom">
+            <p>Copyright 2026 <strong>John Creatives.</strong> All rights reserved.</p>
+            <p>Built with passion, code, and creativity.</p>
+        </div>
     </footer>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+        <img src="https://api.iconify.design/lucide:arrow-up.svg" alt="">
+    </button>
+
     <script>
         const hamburger = document.getElementById("hamburger");
         const sidebar = document.getElementById("sidebar");
+        const backToTop = document.getElementById("backToTop");
         const updateNavbar = () => {
             document.body.classList.toggle("nav-scrolled", window.scrollY > 24);
+            backToTop.classList.toggle("is-visible", window.scrollY > 650);
         };
 
         hamburger.addEventListener("click", () => {
@@ -201,8 +290,21 @@
             document.body.classList.toggle("menu-open");
         });
 
+        sidebar.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                sidebar.classList.remove("active");
+                document.body.classList.remove("menu-open");
+            });
+        });
+
         updateNavbar();
         window.addEventListener("scroll", updateNavbar);
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
     </script>
+    <script src="motion.js"></script>
 </body>
 </html>

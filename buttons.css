@@ -1,0 +1,202 @@
+.connect-btn,
+.outline-btn,
+.download-btn,
+.project-btn,
+.button-contact,
+.icon-button,
+.social-icon {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	background:
+		linear-gradient(135deg, rgba(255, 255, 255, 0.62), rgba(200, 221, 245, 0.28)) !important;
+	border: 1px solid rgba(34, 86, 128, 0.24) !important;
+	box-shadow: 0 12px 28px rgba(36, 52, 71, 0.12);
+	backdrop-filter: blur(14px);
+	color: #203448 !important;
+	font-weight: 700;
+	transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.connect-btn,
+.outline-btn,
+.download-btn,
+.project-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 46px;
+	box-sizing: border-box;
+	border-radius: 999px !important;
+	padding: 0 24px;
+	line-height: 1;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.home-buttons .connect-btn,
+.home-buttons .outline-btn {
+	width: 166px;
+	min-height: 48px;
+	margin: 0;
+}
+
+.home-tags span {
+	background: rgba(34, 86, 128, 0.1) !important;
+	color: #225680 !important;
+	border: 1px solid rgba(34, 86, 128, 0.18);
+	box-shadow: none !important;
+	border-radius: 999px;
+	padding: 7px 14px;
+	font-size: 13px;
+	font-weight: 700;
+	animation: none !important;
+}
+
+.button-contact {
+	border-radius: 999px !important;
+}
+
+.connect-btn::before,
+.outline-btn::before,
+.download-btn::before,
+.project-btn::before,
+.button-contact::before,
+.icon-button::before,
+.social-icon::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.68) 42%, transparent 68%);
+	transform: translateX(-130%);
+	transition: transform 0.55s ease;
+}
+
+.connect-btn:hover,
+.outline-btn:hover,
+.download-btn:hover,
+.project-btn:hover,
+.button-contact:hover,
+.icon-button:hover,
+.social-icon:hover {
+	background:
+		linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(200, 221, 245, 0.42)) !important;
+	border-color: rgba(34, 86, 128, 0.38) !important;
+	box-shadow: 0 18px 36px rgba(34, 86, 128, 0.2);
+	color: #134B70 !important;
+	transform: translateY(-3px);
+}
+
+.connect-btn:hover::before,
+.outline-btn:hover::before,
+.download-btn:hover::before,
+.project-btn:hover::before,
+.button-contact:hover::before,
+.icon-button:hover::before,
+.social-icon:hover::before {
+	transform: translateX(130%);
+}
+
+.connect-btn:focus-visible,
+.outline-btn:focus-visible,
+.download-btn:focus-visible,
+.project-btn:focus-visible,
+.button-contact:focus-visible,
+.icon-button:focus-visible,
+.social-icon:focus-visible {
+	outline: 3px solid rgba(34, 86, 128, 0.28);
+	outline-offset: 4px;
+}
+
+.download-btn .icon {
+	color: inherit !important;
+}
+
+.button-contact {
+	min-width: 150px;
+	width: auto;
+	padding: 0 28px;
+}
+
+.back-to-top {
+	position: fixed;
+	right: 24px;
+	bottom: 24px;
+	z-index: 2800;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	background:
+		linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(200, 221, 245, 0.35));
+	border: 1px solid rgba(34, 86, 128, 0.24);
+	border-radius: 50%;
+	box-shadow: 0 14px 30px rgba(36, 52, 71, 0.16);
+	backdrop-filter: blur(14px);
+	cursor: pointer;
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(16px) scale(0.92);
+	transition: opacity 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.back-to-top.is-visible {
+	opacity: 1;
+	pointer-events: auto;
+	transform: translateY(0) scale(1);
+}
+
+.back-to-top img {
+	width: 22px;
+	height: 22px;
+}
+
+.back-to-top:hover {
+	box-shadow: 0 18px 38px rgba(34, 86, 128, 0.22);
+	transform: translateY(-4px) scale(1);
+}
+
+@media screen and (max-width: 425px) {
+	.connect-btn,
+	.outline-btn,
+	.download-btn,
+	.project-btn {
+		min-height: 44px;
+		padding: 0 18px;
+	}
+
+	.button-contact {
+		width: auto;
+		min-width: 130px;
+		font-size: 18px;
+	}
+
+	.back-to-top {
+		right: 16px;
+		bottom: 16px;
+		width: 44px;
+		height: 44px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.connect-btn,
+	.outline-btn,
+	.download-btn,
+	.project-btn,
+	.button-contact,
+	.icon-button,
+	.social-icon,
+	.connect-btn::before,
+	.outline-btn::before,
+	.download-btn::before,
+	.project-btn::before,
+	.button-contact::before,
+	.icon-button::before,
+	.social-icon::before {
+		transition-duration: 0.001ms !important;
+	}
+}

@@ -6,14 +6,13 @@
     <title>John Benidict Misal</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="motion.css" />
+    <link rel="stylesheet" href="buttons.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" href="img-sources/fav-icon.png" />
 </head>
 <body class="home-upgrade">
-    <div class="logo">
-        <img src="img-sources/logo-hdr2.png" alt="John Creatives Logo" />
-    </div>
-
     <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
@@ -21,6 +20,9 @@
     </div>
 
     <nav class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="img-sources/logo-hdr2.png" alt="John Creatives Logo" />
+        </div>
         <ul class="menu">
             <li><a class="active" href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -81,15 +83,24 @@
         <div class="preview-grid">
             <div class="preview-card">
                 <img src="img-sources/artwork1.png" alt="Product poster project" />
-                <h3>Poster Design</h3>
+                <div class="preview-card-body">
+                    <span>Visual Design</span>
+                    <h3>Poster Design</h3>
+                </div>
             </div>
             <div class="preview-card">
                 <img src="img-sources/slideshow1.jpg" alt="Creative project preview" />
-                <h3>Visual Storytelling</h3>
+                <div class="preview-card-body">
+                    <span>Motion Work</span>
+                    <h3>Visual Storytelling</h3>
+                </div>
             </div>
             <div class="preview-card">
                 <img src="img-sources/artwork6.png" alt="Self poster project" />
-                <h3>Personal Branding</h3>
+                <div class="preview-card-body">
+                    <span>Creative Identity</span>
+                    <h3>Personal Branding</h3>
+                </div>
             </div>
         </div>
         <a href="artworks.html" class="connect-btn preview-btn">See More Projects</a>
@@ -101,25 +112,65 @@
             <p>A glimpse into my creativity through design, motion, and storytelling.</p>
         </div>
         <section class="video-section">
-            <video controls muted playsinline poster="img-sources/slideshow2.jpg">
+            <video id="demoReelVideo" controls autoplay loop playsinline preload="auto" poster="img-sources/slideshow2.jpg">
                 <source src="video-sources/demo-reel.MP4" type="video/mp4" />
             </video>
         </section>
     </section>
 
     <footer class="footer">
-        <div class="footer-logo">
-            <img src="img-sources/logo-foot.png" alt="John Creatives Logo" />
+        <div class="footer-main">
+            <div class="footer-brand">
+                <img src="img-sources/logo-hdr2.png" alt="John Creatives Logo" />
+                <p>Designing useful digital experiences through code, visuals, and storytelling.</p>
+                <a class="footer-download" href="pdf-sources/John_CV.pdf" download>
+                    <img src="https://api.iconify.design/lucide:download.svg" alt="" />
+                    Download CV
+                </a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Me</h3>
+                <a href="mailto:jhnbndct.edu022@gmail.com"><span><img src="https://api.iconify.design/lucide:mail.svg" alt="" /></span> jhnbndct.edu022@gmail.com</a>
+                <a href="tel:+639665491732"><span><img src="https://api.iconify.design/lucide:phone.svg" alt="" /></span> +63 966 549 1732</a>
+                <p><span><img src="https://api.iconify.design/lucide:map-pin.svg" alt="" /></span> Valenzuela, Metro Manila</p>
+            </div>
+            <div class="footer-quicklinks">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home <span>→</span></a>
+                <a href="about.html">About <span>→</span></a>
+                <a href="artworks.html">Projects <span>→</span></a>
+                <a href="contact.html">Contact <span>→</span></a>
+            </div>
+            <div class="footer-socials">
+                <h3>Socials</h3>
+                <div class="social-icons">
+                    <a class="social-icon linkedin-icon" href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">in</a>
+                    <a class="social-icon" href="https://www.facebook.com/jhn.bndxt/" target="_blank" aria-label="Facebook">
+                        <img src="img-sources/fb-icon.png" alt="" />
+                    </a>
+                    <a class="social-icon" href="https://www.instagram.com/jhn.bndxt?igsh=OGdoYWJkNm5tOGhp&utm_source=qr" target="_blank" aria-label="Instagram">
+                        <img src="img-sources/instagram-icon.png" alt="" />
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="footer-line"></div>
-        <p class="footer-text">Copyright 2026 John Creatives. All rights reserved.</p>
+        <div class="footer-bottom">
+            <p>© 2026 <strong>John Creatives.</strong> All rights reserved.</p>
+            <p>Built with passion, code, and creativity.</p>
+        </div>
     </footer>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+        <img src="https://api.iconify.design/lucide:arrow-up.svg" alt="" />
+    </button>
 
     <script>
         const hamburger = document.getElementById("hamburger");
         const sidebar = document.getElementById("sidebar");
+        const backToTop = document.getElementById("backToTop");
         const updateNavbar = () => {
             document.body.classList.toggle("nav-scrolled", window.scrollY > 24);
+            backToTop.classList.toggle("is-visible", window.scrollY > 650);
         };
 
         hamburger.addEventListener("click", () => {
@@ -128,8 +179,53 @@
             document.body.classList.toggle("menu-open");
         });
 
+        sidebar.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                sidebar.classList.remove("active");
+                document.body.classList.remove("menu-open");
+            });
+        });
+
         updateNavbar();
         window.addEventListener("scroll", updateNavbar);
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        const demoReelVideo = document.getElementById("demoReelVideo");
+        const playDemoReel = () => {
+            if (!demoReelVideo) return;
+
+            demoReelVideo.muted = false;
+            demoReelVideo.play().catch(() => {
+                const playAfterInteraction = () => {
+                    demoReelVideo.play().finally(() => {
+                        window.removeEventListener("pointerdown", playAfterInteraction);
+                        window.removeEventListener("keydown", playAfterInteraction);
+                    });
+                };
+
+                window.addEventListener("pointerdown", playAfterInteraction, { once: true });
+                window.addEventListener("keydown", playAfterInteraction, { once: true });
+            });
+        };
+
+        if ("IntersectionObserver" in window && demoReelVideo) {
+            const reelObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        playDemoReel();
+                    } else {
+                        demoReelVideo.pause();
+                    }
+                });
+            }, { threshold: 0.35 });
+
+            reelObserver.observe(demoReelVideo);
+        }
     </script>
+    <script src="motion.js"></script>
 </body>
 </html>
