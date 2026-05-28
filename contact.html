@@ -93,6 +93,19 @@
             </div>
         </form>
     </div>
+
+    <div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+        <div class="contact-modal__panel" role="document">
+            <button class="contact-modal__close" id="contactModalClose" type="button" aria-label="Close notification">
+                <span aria-hidden="true">×</span>
+            </button>
+            <div class="contact-modal__icon" id="contactModalIcon" aria-hidden="true"></div>
+            <p class="contact-modal__eyebrow" id="contactModalEyebrow">Message Status</p>
+            <h2 id="contactModalTitle">Message Sent</h2>
+            <p id="contactModalMessage">Thank you for reaching out. I'll get back to you soon.</p>
+            <button class="contact-modal__button" id="contactModalButton" type="button">Okay</button>
+        </div>
+    </div>
 	
 	<section class="below-contact">
     <div class="below-contact-heading">
@@ -198,9 +211,29 @@
         const backToTop = document.getElementById("backToTop");
         const contactForm = document.getElementById("contactForm");
         const contactSubmitButton = contactForm.querySelector(".button-contact");
+        const contactModal = document.getElementById("contactModal");
+        const contactModalTitle = document.getElementById("contactModalTitle");
+        const contactModalMessage = document.getElementById("contactModalMessage");
+        const contactModalEyebrow = document.getElementById("contactModalEyebrow");
+        const contactModalIcon = document.getElementById("contactModalIcon");
+        const contactModalClose = document.getElementById("contactModalClose");
+        const contactModalButton = document.getElementById("contactModalButton");
         const updateNavbar = () => {
             document.body.classList.toggle("nav-scrolled", window.scrollY > 24);
             backToTop.classList.toggle("is-visible", window.scrollY > 650);
+        };
+        const openContactModal = ({ type, title, message }) => {
+            contactModal.classList.toggle("is-error", type === "error");
+            contactModal.classList.toggle("is-success", type === "success");
+            contactModalTitle.textContent = title;
+            contactModalMessage.textContent = message;
+            contactModalEyebrow.textContent = type === "success" ? "Message Sent" : "Message Failed";
+            contactModalIcon.textContent = type === "success" ? "✓" : "!";
+            contactModal.setAttribute("aria-hidden", "false");
+            contactModalButton.focus();
+        };
+        const closeContactModal = () => {
+            contactModal.setAttribute("aria-hidden", "true");
         };
 
         hamburger.addEventListener("click", () => {
@@ -224,6 +257,19 @@
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
 
+        contactModalClose.addEventListener("click", closeContactModal);
+        contactModalButton.addEventListener("click", closeContactModal);
+        contactModal.addEventListener("click", (e) => {
+            if (e.target === contactModal) {
+                closeContactModal();
+            }
+        });
+        window.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && contactModal.getAttribute("aria-hidden") === "false") {
+                closeContactModal();
+            }
+        });
+
         contactForm.addEventListener("submit", (e) => {
             e.preventDefault();
             contactSubmitButton.disabled = true;
@@ -238,13 +284,21 @@
                 }
             )
             .then(() => {
-                alert("Message sent successfully!");
+                openContactModal({
+                    type: "success",
+                    title: "Message Sent Successfully",
+                    message: "Thank you for reaching out. Your message has been sent to my inbox."
+                });
                 e.target.reset();
             })
             .catch((error) => {
                 console.log(error);
                 const errorMessage = error?.text || error?.message || "Please check your EmailJS service, template, and allowed domains.";
-                alert(`Failed to send message: ${errorMessage}`);
+                openContactModal({
+                    type: "error",
+                    title: "Message Was Not Sent",
+                    message: errorMessage
+                });
             })
             .finally(() => {
                 contactSubmitButton.disabled = false;
