@@ -233,7 +233,9 @@
                 "service_t34ovwl",
                 "template_mfyllirv",
                 e.target,
-                "hzchdA93gl0bW9Sk2v"
+                {
+                    publicKey: "hzchdA93gl0bW9Sk2v"
+                }
             )
             .then(() => {
                 alert("Message sent successfully!");
@@ -241,7 +243,8 @@
             })
             .catch((error) => {
                 console.log(error);
-                alert("Failed to send message.");
+                const errorMessage = error?.text || error?.message || "Please check your EmailJS service, template, and allowed domains.";
+                alert(`Failed to send message: ${errorMessage}`);
             })
             .finally(() => {
                 contactSubmitButton.disabled = false;
