@@ -1,0 +1,614 @@
+/* Homepage responsive layer */
+body.home-upgrade .home-content {
+    width: min(1180px, calc(100% - 40px));
+    margin-inline: auto;
+    min-height: calc(86vh - var(--nav-height, 92px));
+    padding: clamp(34px, 5vw, 72px) 0 clamp(42px, 6vw, 84px);
+}
+
+body.home-upgrade .home-content .profile-picture {
+    margin-top: 0;
+}
+
+body.home-upgrade .profile-picture img {
+    width: clamp(150px, 16vw, 230px);
+    height: clamp(150px, 16vw, 230px);
+    margin-top: 0;
+}
+
+body.home-upgrade .Home-Description {
+    width: min(100%, 980px);
+    padding-top: clamp(18px, 3vw, 34px);
+    margin-inline: auto;
+}
+
+body.home-upgrade .headline {
+    max-width: 100%;
+    font-size: clamp(2rem, 4vw, 3.45rem);
+    line-height: 1.12;
+    text-align: center;
+}
+
+body.home-upgrade .description {
+    max-width: 860px;
+    margin-inline: auto;
+    font-size: clamp(0.98rem, 1.45vw, 1.25rem);
+    line-height: 1.65;
+    text-align: center;
+}
+
+body.home-upgrade .home-tags,
+body.home-upgrade .home-buttons {
+    width: min(100%, 760px);
+    margin-inline: auto;
+}
+
+body.home-upgrade .home-focus,
+body.home-upgrade .home-preview {
+    width: 100%;
+    padding: clamp(64px, 8vw, 104px) 20px;
+    gap: clamp(28px, 4vw, 46px);
+    box-sizing: border-box;
+}
+
+body.home-upgrade .focus-grid,
+body.home-upgrade .preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(22px, 3vw, 36px);
+    width: min(1180px, calc(100% - 40px));
+    align-items: stretch;
+}
+
+body.home-upgrade .focus-card,
+body.home-upgrade .preview-card,
+body.home-upgrade .preview-card:nth-child(1),
+body.home-upgrade .preview-card:nth-child(2),
+body.home-upgrade .preview-card:nth-child(3) {
+    width: 100%;
+    max-width: none;
+    flex: none;
+    box-sizing: border-box;
+}
+
+body.home-upgrade .preview-card img,
+body.home-upgrade .preview-card:nth-child(1) img,
+body.home-upgrade .preview-card:nth-child(2) img,
+body.home-upgrade .preview-card:nth-child(3) img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+}
+
+body.home-upgrade .preview-card:nth-child(2) img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+body.home-upgrade #demo-reel {
+    min-height: auto;
+    margin: 0 auto;
+    padding: clamp(56px, 8vw, 92px) 20px clamp(70px, 9vw, 110px);
+    box-sizing: border-box;
+}
+
+body.home-upgrade .video-section {
+    width: min(100%, 1040px);
+    margin-inline: auto;
+}
+
+body.home-upgrade .video-section video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+    body.home-upgrade {
+        padding-top: 0 !important;
+    }
+
+    body.home-upgrade,
+    body.home-upgrade *,
+    body.home-upgrade *::before,
+    body.home-upgrade *::after {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        filter: none !important;
+    }
+
+    body.home-upgrade .home-preview::before,
+    body.home-upgrade .focus-card::before,
+    body.home-upgrade .preview-card::before,
+    body.home-upgrade .footer::before,
+    body.home-upgrade .footer::after {
+        display: none !important;
+        content: none !important;
+    }
+
+    body.home-upgrade::after,
+    body.home-upgrade.menu-open::after {
+        display: none !important;
+        content: none !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        background: transparent !important;
+    }
+
+    body.home-upgrade.nav-scrolled nav.sidebar {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(232, 242, 255, 0.96)) !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+    body.home-upgrade nav.sidebar,
+    body.home-upgrade nav.sidebar.active {
+        position: fixed !important;
+        inset: 0 0 0 auto !important;
+        width: min(88vw, 390px) !important;
+        height: 100vh !important;
+        min-height: 100vh !important;
+        max-height: 100vh !important;
+        padding: 28px 22px 34px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 22px !important;
+        overflow-y: auto !important;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(232, 242, 255, 0.96)) !important;
+        border-left: 1px solid rgba(34, 86, 128, 0.16) !important;
+        box-shadow: -24px 0 58px rgba(36, 52, 71, 0.18) !important;
+        opacity: 1 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transform: translateX(105%) !important;
+        transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.34s ease !important;
+        z-index: 3100 !important;
+    }
+
+    body.home-upgrade.menu-open nav.sidebar,
+    body.home-upgrade.menu-open nav.sidebar.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: translateX(0) !important;
+    }
+
+    body.home-upgrade.menu-open {
+        overflow: hidden !important;
+    }
+
+    body.home-upgrade nav.sidebar .logo,
+    body.home-upgrade.menu-open nav.sidebar .logo {
+        display: flex !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        justify-content: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    body.home-upgrade nav.sidebar .logo img,
+    body.home-upgrade.nav-scrolled nav.sidebar .logo img {
+        height: 108px !important;
+        width: auto !important;
+        margin: -18px auto -10px !important;
+        filter: none !important;
+    }
+
+    body.home-upgrade:not(.menu-open) nav.sidebar .menu {
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: none !important;
+        position: static !important;
+        inset: auto !important;
+        width: 100% !important;
+        max-height: none !important;
+        overflow: visible !important;
+        transform: none !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        gap: 12px !important;
+        align-items: stretch !important;
+    }
+
+    body.home-upgrade.menu-open nav.sidebar .menu {
+        display: flex !important;
+        position: static !important;
+        inset: auto !important;
+        width: 100% !important;
+        max-height: none !important;
+        overflow: visible !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        background: transparent !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        gap: 12px !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        transform: none !important;
+    }
+
+    body.home-upgrade nav.sidebar .menu a {
+        min-height: 50px !important;
+        justify-content: flex-start !important;
+        background: rgba(255, 255, 255, 0.54) !important;
+        border: 1px solid rgba(34, 86, 128, 0.16) !important;
+        box-shadow: 0 12px 28px rgba(36, 52, 71, 0.08) !important;
+        font-size: 16px !important;
+        padding: 0 16px !important;
+    }
+
+    body.home-upgrade .sidebar-connect {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        margin-top: 4px !important;
+        padding-top: 22px !important;
+        border-top: 1px solid rgba(34, 86, 128, 0.18) !important;
+        gap: 10px !important;
+    }
+
+    body.home-upgrade .sidebar-connect p {
+        margin: 0 0 4px !important;
+        color: #225680 !important;
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 0.92rem !important;
+        font-weight: 800 !important;
+        text-align: left !important;
+    }
+
+    body.home-upgrade .sidebar-connect a {
+        display: grid !important;
+        grid-template-columns: 38px 1fr 18px !important;
+        align-items: center !important;
+        gap: 10px !important;
+        min-height: 48px !important;
+        padding: 0 14px !important;
+        color: #243447 !important;
+        background: rgba(255, 255, 255, 0.54) !important;
+        border: 1px solid rgba(34, 86, 128, 0.14) !important;
+        border-radius: 999px !important;
+        box-shadow: 0 10px 24px rgba(36, 52, 71, 0.08) !important;
+        font-size: 14px !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+    }
+
+    body.home-upgrade .sidebar-connect a span {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 50% !important;
+        background: rgba(232, 242, 255, 0.9) !important;
+        border: 1px solid rgba(34, 86, 128, 0.12) !important;
+    }
+
+    body.home-upgrade .sidebar-connect img {
+        width: 17px !important;
+        height: 17px !important;
+        object-fit: contain !important;
+    }
+
+    body.home-upgrade .sidebar-connect .connect-arrow {
+        width: 16px !important;
+        height: 16px !important;
+        opacity: 0.75 !important;
+    }
+
+    body.home-upgrade.menu-open nav.sidebar .logo,
+    body.home-upgrade.menu-open nav.sidebar .menu li,
+    body.home-upgrade.menu-open nav.sidebar .sidebar-connect {
+        animation: sidebarItemIn 0.42s ease both !important;
+    }
+
+    body.home-upgrade.menu-open nav.sidebar .logo {
+        animation-delay: 0.05s !important;
+    }
+
+    body.home-upgrade.menu-open nav.sidebar .menu li:nth-child(1) {
+        animation-delay: 0.1s !important;
+    }
+
+    body.home-upgrade.menu-open nav.sidebar .menu li:nth-child(2) {
+        animation-delay: 0.14s !important;
+    }
+
+    body.home-upgrade.menu-open nav.sidebar .menu li:nth-child(3) {
+        animation-delay: 0.18s !important;
+    }
+
+    body.home-upgrade.menu-open nav.sidebar .menu li:nth-child(4) {
+        animation-delay: 0.22s !important;
+    }
+
+    body.home-upgrade.menu-open nav.sidebar .sidebar-connect {
+        animation-delay: 0.26s !important;
+    }
+
+    body.home-upgrade nav.sidebar .menu a.active {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+    body.home-upgrade .focus-card,
+    body.home-upgrade .preview-card {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.86), rgba(223, 239, 255, 0.58));
+    }
+
+    body.home-upgrade .footer,
+    body.home-upgrade .footer-main,
+    body.home-upgrade .footer-bottom {
+        background: #f8fbff !important;
+        opacity: 1 !important;
+        filter: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+    body.home-upgrade .footer *,
+    body.home-upgrade .footer a,
+    body.home-upgrade .footer p,
+    body.home-upgrade .footer h3 {
+        opacity: 1 !important;
+        filter: none !important;
+    }
+
+    body.home-upgrade .home-content {
+        width: min(100% - 36px, 920px);
+        min-height: auto;
+        padding-top: 28px;
+    }
+
+    body.home-upgrade .focus-grid,
+    body.home-upgrade .preview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: min(100% - 36px, 820px);
+    }
+
+    body.home-upgrade .preview-card:last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: 420px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body.home-upgrade .home-content {
+        width: min(100% - 28px, 640px);
+        padding-top: 24px;
+        padding-bottom: 36px;
+    }
+
+    body.home-upgrade .profile-picture img {
+        width: 148px;
+        height: 148px;
+    }
+
+    body.home-upgrade .headline {
+        font-size: clamp(1.85rem, 7vw, 2.65rem);
+    }
+
+    body.home-upgrade .headline br {
+        display: none;
+    }
+
+    body.home-upgrade .description {
+        font-size: 0.98rem;
+    }
+
+    body.home-upgrade .home-tags {
+        max-width: 100%;
+        gap: 9px;
+    }
+
+    body.home-upgrade .home-tags span {
+        font-size: 0.78rem;
+        padding: 7px 12px;
+    }
+
+    body.home-upgrade .home-buttons {
+        width: min(100%, 360px);
+        gap: 12px;
+    }
+
+    body.home-upgrade .home-buttons .connect-btn,
+    body.home-upgrade .home-buttons .outline-btn {
+        flex: 0 1 auto;
+        width: auto !important;
+        min-width: 154px;
+        min-height: 46px;
+        padding: 0 22px;
+    }
+
+    body.home-upgrade .home-focus,
+    body.home-upgrade .home-preview {
+        padding: 58px 14px;
+    }
+
+    body.home-upgrade .focus-grid,
+    body.home-upgrade .preview-grid {
+        grid-template-columns: 1fr;
+        width: min(100% - 28px, 520px);
+    }
+
+    body.home-upgrade .preview-card:last-child {
+        grid-column: auto;
+        max-width: none;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    html,
+    body.home-upgrade {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body.home-upgrade .home-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-top: 18px !important;
+        padding-bottom: 30px;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        text-align: center !important;
+        transform: none !important;
+        box-sizing: border-box !important;
+    }
+
+    body.home-upgrade .profile-picture img {
+        width: 112px;
+        height: 112px;
+    }
+
+    body.home-upgrade .Home-Description {
+        padding-top: 16px;
+        width: min(100%, 330px) !important;
+        max-width: 330px !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+
+    body.home-upgrade .intro {
+        font-size: 0.9rem;
+    }
+
+    body.home-upgrade .headline {
+        font-size: clamp(1.65rem, 7.5vw, 2rem);
+        line-height: 1.12;
+        width: 100% !important;
+        max-width: 330px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+
+    body.home-upgrade .description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        width: 100% !important;
+        max-width: 330px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+
+    body.home-upgrade .home-tags {
+        margin-top: 4px;
+        width: min(100%, 310px) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        justify-content: center !important;
+    }
+
+    body.home-upgrade .home-buttons {
+        width: min(100%, 300px) !important;
+        margin: 14px auto 0 !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+    }
+
+    body.home-upgrade .home-tags {
+        gap: 8px;
+    }
+
+    body.home-upgrade .home-tags span {
+        font-size: 0.74rem;
+        padding: 6px 10px;
+    }
+
+    body.home-upgrade .home-buttons .connect-btn,
+    body.home-upgrade .home-buttons .outline-btn {
+        flex: 0 0 auto !important;
+        width: 136px !important;
+        min-width: 0 !important;
+        max-width: 136px !important;
+        height: 42px !important;
+        min-height: 42px !important;
+        padding: 0 12px !important;
+        border-radius: 999px !important;
+        font-size: 0.82rem !important;
+        line-height: 1 !important;
+        white-space: nowrap !important;
+    }
+
+    body.home-upgrade .home-section-txt > p:nth-child(1) {
+        font-size: 1rem;
+    }
+
+    body.home-upgrade .home-section-txt > p:nth-child(2) {
+        font-size: 1.55rem;
+    }
+
+    body.home-upgrade .focus-card {
+        padding: 20px;
+    }
+
+    body.home-upgrade .preview-card {
+        padding: 10px;
+    }
+
+    body.home-upgrade #demo-reel {
+        padding-inline: 12px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    body.home-upgrade .home-content {
+        width: 100% !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    body.home-upgrade .Home-Description,
+    body.home-upgrade .headline,
+    body.home-upgrade .description {
+        width: min(100%, 300px) !important;
+        max-width: 300px !important;
+    }
+
+    body.home-upgrade .home-buttons {
+        width: min(100%, 278px) !important;
+        gap: 8px !important;
+    }
+
+    body.home-upgrade .home-buttons .connect-btn,
+    body.home-upgrade .home-buttons .outline-btn {
+        width: 132px !important;
+        max-width: 132px !important;
+        height: 40px !important;
+        min-height: 40px !important;
+        font-size: 0.78rem !important;
+        padding: 0 10px !important;
+    }
+}

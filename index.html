@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="motion.css" />
     <link rel="stylesheet" href="buttons.css" />
+    <link rel="stylesheet" href="home-responsive.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" href="img-sources/fav-icon.png" />
 </head>
@@ -31,6 +32,24 @@
             <li><a href="artworks.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div class="sidebar-connect" aria-label="Connect links">
+            <p>Let's Connect</p>
+            <a href="https://www.linkedin.com/in/john-benidict-misal/" target="_blank" rel="noopener">
+                <span><img src="https://api.iconify.design/lucide:linkedin.svg" alt="" /></span>
+                LinkedIn
+                <img class="connect-arrow" src="https://api.iconify.design/lucide:arrow-up-right.svg" alt="" />
+            </a>
+            <a href="mailto:misaljohnbenidict@gmail.com">
+                <span><img src="https://api.iconify.design/lucide:mail.svg" alt="" /></span>
+                Email
+                <img class="connect-arrow" src="https://api.iconify.design/lucide:arrow-up-right.svg" alt="" />
+            </a>
+            <a href="tel:+639665491732">
+                <span><img src="https://api.iconify.design/lucide:phone.svg" alt="" /></span>
+                Contact Number
+                <img class="connect-arrow" src="https://api.iconify.design/lucide:arrow-up-right.svg" alt="" />
+            </a>
+        </div>
     </nav>
 
     <main class="content home-content">
@@ -38,10 +57,12 @@
             <img src="img-sources/my-image.png" alt="John Benidict Misal" />
         </div>
         <div class="Home-Description">
-            <h3 class="intro">Hi, I'm John Benidict Misal</h3>
+            <h3 class="intro typing-intro" data-typing-text="Hi, I'm John Benidict Misal!" aria-label="Hi, I'm John Benidict Misal!">
+                <span class="typing-text">Hi, I'm John Benidict Misal!</span><span class="typing-cursor" aria-hidden="true"></span><span class="wave-hand" aria-hidden="true">👋</span>
+            </h3>
             <h1 class="headline">Building digital experiences with<br />design, code, and creativity.</h1>
             <p class="description">
-                A 4th year BSIT student passionate about UI/UX design, web development, video editing,
+                An incoming 4th year BSIT student passionate about UI/UX design, web development, video editing,
                 and creative systems that are useful, clean, and meaningful.
             </p>
             <div class="home-tags" aria-label="Portfolio highlights">
@@ -50,7 +71,7 @@
                 <span>Video Editing</span>
             </div>
             <div class="home-buttons">
-                <a href="#home-focus" class="connect-btn">Explore More</a>
+                <a href="about.html" class="connect-btn">Explore More</a>
                 <a href="artworks.html" class="outline-btn">View Projects</a>
             </div>
         </div>
@@ -132,7 +153,7 @@
             </div>
             <div class="footer-contact">
                 <h3>Contact Me</h3>
-                <a href="mailto:jhnbndct.edu022@gmail.com"><span><img src="https://api.iconify.design/lucide:mail.svg" alt="" /></span> jhnbndct.edu022@gmail.com</a>
+                <a href="mailto:misaljohnbenidict@gmail.com"><span><img src="https://api.iconify.design/lucide:mail.svg" alt="" /></span> misaljohnbenidict@gmail.com</a>
                 <a href="tel:+639665491732"><span><img src="https://api.iconify.design/lucide:phone.svg" alt="" /></span> +63 966 549 1732</a>
                 <p><span><img src="https://api.iconify.design/lucide:map-pin.svg" alt="" /></span> Valenzuela, Metro Manila</p>
             </div>
@@ -146,18 +167,21 @@
             <div class="footer-socials">
                 <h3>Socials</h3>
                 <div class="social-icons">
-                    <a class="social-icon linkedin-icon" href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">in</a>
+                    <a class="social-icon linkedin-icon" href="https://www.linkedin.com/in/john-benidict-misal/" target="_blank" aria-label="LinkedIn">in</a>
                     <a class="social-icon" href="https://www.facebook.com/jhn.bndxt/" target="_blank" aria-label="Facebook">
                         <img src="img-sources/fb-icon.png" alt="" />
                     </a>
                     <a class="social-icon" href="https://www.instagram.com/jhn.bndxt?igsh=OGdoYWJkNm5tOGhp&utm_source=qr" target="_blank" aria-label="Instagram">
                         <img src="img-sources/instagram-icon.png" alt="" />
                     </a>
+                    <a class="social-icon" href="https://www.youtube.com/@MisalJohnBenidict" target="_blank" aria-label="YouTube">
+                        <img src="img-sources/youtube-icon.png" alt="" />
+                    </a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 <strong>John Creatives.</strong> All rights reserved.</p>
+            <p>© 2026 John Benidict Misal. All rights reserved.</p>
             <p>Built with passion, code, and creativity.</p>
         </div>
     </footer>
@@ -173,6 +197,12 @@
         const updateNavbar = () => {
             document.body.classList.toggle("nav-scrolled", window.scrollY > 24);
             backToTop.classList.toggle("is-visible", window.scrollY > 650);
+
+            if (window.innerWidth <= 1024 && document.body.classList.contains("menu-open")) {
+                hamburger.classList.remove("active");
+                sidebar.classList.remove("active");
+                document.body.classList.remove("menu-open");
+            }
         };
 
         hamburger.addEventListener("click", () => {

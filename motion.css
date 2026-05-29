@@ -40,6 +40,50 @@
 	}
 }
 
+@keyframes cursorBlink {
+	0%, 49% {
+		opacity: 1;
+	}
+
+	50%, 100% {
+		opacity: 0;
+	}
+}
+
+@keyframes wavePop {
+	from {
+		opacity: 0;
+		transform: translateY(4px) rotate(0deg) scale(0.85);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0) rotate(0deg) scale(1);
+	}
+}
+
+@keyframes waveHand {
+	0%, 100% {
+		transform: rotate(0deg);
+	}
+
+	20% {
+		transform: rotate(18deg);
+	}
+
+	40% {
+		transform: rotate(-10deg);
+	}
+
+	60% {
+		transform: rotate(14deg);
+	}
+
+	80% {
+		transform: rotate(-6deg);
+	}
+}
+
 .profile-picture {
 	animation: floatProfile 5.5s ease-in-out infinite;
 }
@@ -71,6 +115,50 @@
 
 .home-buttons {
 	animation-delay: 0.44s;
+}
+
+.typing-intro {
+	align-items: center;
+	column-gap: 2px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	min-height: 1.35em;
+}
+
+.typing-name {
+	align-items: center;
+	display: inline-flex;
+}
+
+.typing-text {
+	min-width: 1ch;
+}
+
+.typing-cursor {
+	animation: cursorBlink 0.8s steps(1) infinite;
+	background: #225680;
+	display: inline-block;
+	height: 1em;
+	margin-left: 4px;
+	width: 2px;
+}
+
+.typing-intro.is-typing-complete .typing-cursor,
+.typing-name.is-typing-complete .typing-cursor {
+	display: none;
+}
+
+.wave-hand {
+	display: inline-block;
+	margin-left: 8px;
+	opacity: 0;
+	transform: translateY(4px) rotate(0deg) scale(0.85);
+	transform-origin: 70% 70%;
+}
+
+.wave-hand.is-visible {
+	animation: wavePop 0.32s ease forwards, waveHand 1.15s ease-in-out 0.32s 2;
 }
 
 .home-tags span {
@@ -167,6 +255,15 @@
 	.Home-Description .description,
 	.home-tags,
 	.home-buttons {
+		opacity: 1 !important;
+		transform: none !important;
+	}
+
+	.typing-cursor {
+		display: none;
+	}
+
+	.wave-hand {
 		opacity: 1 !important;
 		transform: none !important;
 	}

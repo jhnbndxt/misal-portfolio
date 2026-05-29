@@ -1,0 +1,141 @@
+@media screen and (max-width: 768px) {
+	.about-content {
+		height: auto !important;
+		min-height: auto !important;
+		margin-top: 0 !important;
+		padding-top: 18px !important;
+		justify-content: flex-start !important;
+	}
+
+	.about-content .about-section {
+		margin-top: 0 !important;
+		padding-top: 18px !important;
+		gap: 24px !important;
+	}
+
+	.about-content .about-image img {
+		margin-top: 0 !important;
+		max-width: min(74vw, 280px) !important;
+		width: min(74vw, 280px) !important;
+		height: auto !important;
+	}
+
+	#education {
+		margin-top: 0 !important;
+		padding: 46px 16px 54px !important;
+		gap: 22px !important;
+		overflow: hidden !important;
+	}
+
+	#education .education-top {
+		margin: 0 auto 28px !important;
+		gap: 8px !important;
+	}
+
+	#education .education-top > p:nth-child(1) {
+		margin: 0 !important;
+		font-size: 1.25rem !important;
+	}
+
+	#education .education-top > p:nth-child(2) {
+		max-width: 330px !important;
+		margin: 0 auto !important;
+		font-size: clamp(1.45rem, 6vw, 2rem) !important;
+		line-height: 1.16 !important;
+	}
+
+	#education .timeline {
+		width: min(100%, 350px) !important;
+		margin: 0 auto !important;
+		gap: 18px !important;
+		padding-left: 42px !important;
+	}
+
+	#education .timeline::before {
+		display: block !important;
+		left: 18px !important;
+		width: 3px !important;
+	}
+
+	#education .timelineBox,
+	#education .timelineBox:nth-child(odd),
+	#education .timelineBox:nth-child(even) {
+		width: 100% !important;
+		margin: 0 !important;
+		align-self: stretch !important;
+		padding: 20px !important;
+		min-height: auto !important;
+	}
+
+	#education .timelineBox:nth-child(odd)::after,
+	#education .timelineBox:nth-child(even)::after {
+		left: -42px !important;
+		right: auto !important;
+		top: 14px !important;
+		width: 44px !important;
+		height: 44px !important;
+		transform: none !important;
+	}
+
+	#education .timelineBoxHead p:first-child {
+		font-size: 1.25rem !important;
+		line-height: 1.2 !important;
+	}
+
+	#education .timelineBoxHead p:nth-child(2) {
+		font-size: 1rem !important;
+		line-height: 1.28 !important;
+	}
+
+	#education .timelineBoxDes p {
+		font-size: 0.92rem !important;
+		line-height: 1.62 !important;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.about-content {
+		padding-top: 8px !important;
+	}
+
+	.about-content .about-section {
+		padding: 10px 20px 24px !important;
+		gap: 20px !important;
+	}
+
+	.about-content .about-image img {
+		max-width: min(72vw, 250px) !important;
+		width: min(72vw, 250px) !important;
+	}
+
+	#education {
+		padding: 38px 12px 48px !important;
+	}
+
+	#education .education-top > p:nth-child(2) {
+		max-width: 310px !important;
+		font-size: clamp(1.35rem, 6.4vw, 1.75rem) !important;
+	}
+
+	#education .timeline {
+		width: min(100%, 330px) !important;
+		padding-left: 38px !important;
+	}
+
+	#education .timeline::before {
+		left: 16px !important;
+	}
+
+	#education .timelineBox,
+	#education .timelineBox:nth-child(odd),
+	#education .timelineBox:nth-child(even) {
+		padding: 18px !important;
+	}
+
+	#education .timelineBox:nth-child(odd)::after,
+	#education .timelineBox:nth-child(even)::after {
+		left: -38px !important;
+		width: 40px !important;
+		height: 40px !important;
+	}
+}

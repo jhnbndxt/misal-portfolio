@@ -33,13 +33,21 @@
 }
 
 .Message-top > p:nth-child(2) {
-    width: 800px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(980px, calc(100% - 40px)) !important;
     margin-top: 0;
     color: #225680 !important;
     font-family: "Montserrat", "Poppins", sans-serif;
-    font-size: 50px !important;
+    font-size: 44px !important;
     font-weight: 600 !important;
     line-height: 1.2;
+}
+
+.Message-top > p:nth-child(2) span {
+    display: block;
+    white-space: nowrap;
 }
 
 .contact-form {
@@ -337,20 +345,20 @@
 
 .below-contact-heading p {
     margin: 0;
-    color: #225680;
-    font-size: 0.95rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    color: #225680 !important;
+    font-size: 30px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0;
+    text-transform: none;
 }
 
 .below-contact-heading h2 {
-    margin: 10px 0 0;
-    color: #225680;
+    margin: 0;
+    color: #225680 !important;
     font-family: "Montserrat", "Poppins", sans-serif;
-    font-size: clamp(1.75rem, 3.4vw, 3rem);
-    font-weight: 600;
-    line-height: 1.18;
+    font-size: 44px !important;
+    font-weight: 600 !important;
+    line-height: 1.2;
 }
 
 .contact-below-container {
@@ -371,7 +379,7 @@
     min-height: 210px !important;
     width: auto !important;
     margin: 0 !important;
-    padding: 34px 28px !important;
+    padding: 34px 28px 46px !important;
     border: 1px solid rgba(112, 159, 205, 0.34);
     border-radius: 22px !important;
     background:
@@ -446,7 +454,7 @@
     position: relative;
     z-index: 1;
     width: auto !important;
-    margin: 0 !important;
+    margin: 0 0 8px !important;
     color: #52677f !important;
     font-size: 0.94rem !important;
     line-height: 1.65;
@@ -468,20 +476,20 @@
 
 .map-heading p {
     margin: 0;
-    color: #225680;
-    font-size: 0.95rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    color: #225680 !important;
+    font-size: 30px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0;
+    text-transform: none;
 }
 
 .map-heading h2 {
-    margin: 10px 0 0;
-    color: #225680;
+    margin: 0;
+    color: #225680 !important;
     font-family: "Montserrat", "Poppins", sans-serif;
-    font-size: clamp(1.75rem, 3.4vw, 3rem);
-    font-weight: 600;
-    line-height: 1.18;
+    font-size: 44px !important;
+    font-weight: 600 !important;
+    line-height: 1.2;
 }
 
 .map-wrapper {
@@ -589,8 +597,8 @@
     }
 
     .Message-top > p:nth-child(2) {
-        width: 80% !important;
-        font-size: 27px !important;
+        width: min(90%, 460px) !important;
+        font-size: 24px !important;
     }
 
     .contact-form {
@@ -619,6 +627,16 @@
         margin-bottom: 24px;
     }
 
+    .below-contact-heading p,
+    .map-heading p {
+        font-size: 23px !important;
+    }
+
+    .below-contact-heading h2,
+    .map-heading h2 {
+        font-size: 24px !important;
+    }
+
     .contact-below-container {
         grid-template-columns: 1fr;
         gap: 18px;
@@ -628,7 +646,7 @@
     .below-contact-box2,
     .below-contact-box3 {
         min-height: auto !important;
-        padding: 28px 20px !important;
+        padding: 28px 20px 40px !important;
     }
 
     .map-container {
