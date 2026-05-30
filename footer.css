@@ -2,7 +2,7 @@
 	width: 100% !important;
 	max-width: none !important;
 	box-sizing: border-box;
-	margin: 110px 0 0 !important;
+	margin: 60px 0 0 !important;
 	padding: 0 !important;
 	background:
 		linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(232, 242, 255, 0.62)),
@@ -294,7 +294,7 @@
 
 @media screen and (max-width: 1024px) {
 	.footer {
-		margin-top: 84px !important;
+		margin-top: 54px !important;
 		background: #f8fbff !important;
 		backdrop-filter: none !important;
 		-webkit-backdrop-filter: none !important;

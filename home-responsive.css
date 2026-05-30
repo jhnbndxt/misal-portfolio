@@ -46,7 +46,7 @@ body.home-upgrade .home-buttons {
 body.home-upgrade .home-focus,
 body.home-upgrade .home-preview {
     width: 100%;
-    padding: clamp(64px, 8vw, 104px) 20px;
+    padding: clamp(48px, 6vw, 80px) 20px;
     gap: clamp(28px, 4vw, 46px);
     box-sizing: border-box;
 }
@@ -89,10 +89,7 @@ body.home-upgrade .preview-card:nth-child(2) img {
 body.home-upgrade #demo-reel {
     min-height: auto;
     margin: 0 auto;
-    padding: clamp(56px, 8vw, 92px) 20px clamp(70px, 9vw, 110px);
-    box-sizing: border-box;
-}
-
+	padding: clamp(42px, 6vw, 70px) 20px clamp(54px, 7vw, 84px);
 body.home-upgrade .video-section {
     width: min(100%, 1040px);
     margin-inline: auto;
@@ -415,13 +412,19 @@ body.home-upgrade .video-section video {
 
     body.home-upgrade .home-tags {
         max-width: 100%;
-        gap: 9px;
-    }
+		gap: 8px;
+	}
 
-    body.home-upgrade .home-tags span {
-        font-size: 0.78rem;
-        padding: 7px 12px;
-    }
+	body.home-upgrade .home-tags span {
+		font-size: 0.78rem;
+		padding: 7px 12px;
+		gap: 6px;
+	}
+
+	body.home-upgrade .home-tags span img {
+		width: 14px;
+		height: 14px;
+	}
 
     body.home-upgrade .home-buttons {
         width: min(100%, 360px);
@@ -439,14 +442,28 @@ body.home-upgrade .video-section video {
 
     body.home-upgrade .home-focus,
     body.home-upgrade .home-preview {
-        padding: 58px 14px;
-    }
+		padding: 42px 14px;
+	}
 
     body.home-upgrade .focus-grid,
     body.home-upgrade .preview-grid {
         grid-template-columns: 1fr;
         width: min(100% - 28px, 520px);
     }
+
+	body.home-upgrade .focus-card {
+		padding: 20px;
+	}
+
+	body.home-upgrade .focus-icon {
+		width: 56px;
+		height: 56px;
+	}
+
+	body.home-upgrade .focus-icon img {
+		width: 32px;
+		height: 32px;
+	}
 
     body.home-upgrade .preview-card:last-child {
         grid-column: auto;
@@ -571,8 +588,18 @@ body.home-upgrade .video-section video {
     }
 
     body.home-upgrade .focus-card {
-        padding: 20px;
-    }
+		padding: 18px;
+	}
+
+	body.home-upgrade .focus-icon {
+		width: 50px;
+		height: 50px;
+	}
+
+	body.home-upgrade .focus-icon img {
+		width: 28px;
+		height: 28px;
+	}
 
     body.home-upgrade .preview-card {
         padding: 10px;

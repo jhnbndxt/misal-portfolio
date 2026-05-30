@@ -116,7 +116,7 @@ nav.sidebar .menu a.active {
 	align-items: center;
 	text-align: center;
 	gap: 10px;
-	padding: 40px 20px; 
+	padding: 60px 20px; 
 }
 .headline, .intro, .description {
 	margin: 0;
@@ -1648,6 +1648,9 @@ body.home-upgrade nav.sidebar {
 }
 
 .home-tags span {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
 	background: #225680;
 	color: white;
 	padding: 9px 18px;
@@ -1655,6 +1658,12 @@ body.home-upgrade nav.sidebar {
 	font-size: 15px;
 	font-weight: 600;
 	box-shadow: 0 4px 10px rgba(34, 86, 128, 0.16);
+}
+
+.home-tags span img {
+	width: 18px;
+	height: 18px;
+	object-fit: contain;
 }
 
 .home-buttons {
@@ -2039,6 +2048,28 @@ body.home-upgrade #demo-reel {
 	max-width: 320px;
 	padding: 24px;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+}
+
+.focus-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	background: rgba(34, 86, 128, 0.1);
+	border-radius: 12px;
+	margin-bottom: 8px;
+}
+
+.focus-icon img {
+	width: 36px;
+	height: 36px;
+	object-fit: contain;
+	color: #225680;
 }
 
 .focus-card:hover,
@@ -2052,7 +2083,9 @@ body.home-upgrade #demo-reel {
 .preview-card h3 {
 	color: #225680;
 	font-family: 'Montserrat', sans-serif;
-	margin: 0 0 12px;
+	margin: 0;
+	font-size: 18px;
+	font-weight: 700;
 }
 
 .focus-card p {
