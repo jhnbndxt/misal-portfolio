@@ -569,13 +569,36 @@
 
 @media (max-width: 640px) {
     #Contact-Page {
-        padding-top: 39px;
-        margin-bottom: 78px;
+        padding-top: 28px;
+        margin-bottom: 74px;
+    }
+
+    .Contact-top {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+    .Contact-top > p:nth-child(2) {
+        width: min(100%, 330px) !important;
+        max-width: 330px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .Contact-top > p:nth-child(3),
+    .Contact-top .contact-description {
+        width: min(100%, 330px) !important;
+        max-width: 330px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 0 !important;
+        text-align: center !important;
+        text-wrap: pretty;
     }
 
     .contact-icon {
         gap: 12px;
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     .contact-icon .icon-button {
@@ -589,7 +612,10 @@
     }
 
     .Message-top {
-        margin-bottom: 34px !important;
+        width: min(100% - 48px, 360px) !important;
+        margin: 0 auto 32px !important;
+        padding: 0 !important;
+        text-align: center !important;
     }
 
     .Message-top > p:nth-child(1) {
@@ -597,15 +623,27 @@
     }
 
     .Message-top > p:nth-child(2) {
-        width: min(90%, 460px) !important;
-        font-size: 24px !important;
+        display: block !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 0 auto !important;
+        font-size: 22px !important;
+        line-height: 1.22 !important;
+        text-align: center !important;
+        overflow-wrap: normal;
+    }
+
+    .Message-top > p:nth-child(2) span {
+        display: inline !important;
+        white-space: normal !important;
     }
 
     .contact-form {
-        width: min(100% - 28px, 980px) !important;
-        padding: 18px;
-        border-radius: 20px;
-        margin-bottom: 96px !important;
+        width: min(100% - 48px, 360px) !important;
+        padding: 16px;
+        border-radius: 18px;
+        margin-bottom: 78px !important;
+        box-sizing: border-box;
     }
 
     .form-row {
@@ -619,12 +657,12 @@
     }
 
     .below-contact {
-        width: min(100% - 28px, 1220px);
-        margin-bottom: 96px;
+        width: min(100% - 48px, 360px);
+        margin-bottom: 78px;
     }
 
     .below-contact-heading {
-        margin-bottom: 24px;
+        margin-bottom: 26px;
     }
 
     .below-contact-heading p,
@@ -639,26 +677,53 @@
 
     .contact-below-container {
         grid-template-columns: 1fr;
-        gap: 18px;
+        justify-items: center;
+        gap: 26px;
+        width: 100% !important;
+        margin-inline: auto !important;
     }
 
     .below-contact-box1,
     .below-contact-box2,
     .below-contact-box3 {
+        width: 100% !important;
+        max-width: 340px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
         min-height: auto !important;
-        padding: 28px 20px 40px !important;
+        padding: 26px 20px 34px !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
     }
 
     .map-container {
-        width: min(100% - 28px, 1220px);
-        margin-bottom: 96px;
+        width: min(100% - 48px, 360px);
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 78px;
+        box-sizing: border-box;
+    }
+
+    .map-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box;
     }
 
     .map-heading {
-        margin-bottom: 24px;
+        margin-bottom: 26px;
     }
 
     .map {
-        border-radius: 20px;
+        width: 100% !important;
+        border: 1px solid rgba(112, 159, 205, 0.22) !important;
+        border-radius: 16px;
+        box-shadow: 0 18px 44px rgba(31, 87, 130, 0.12);
+        box-sizing: border-box;
+    }
+
+    .map-frame {
+        height: clamp(260px, 72vw, 340px) !important;
     }
 }

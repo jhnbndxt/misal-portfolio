@@ -18,8 +18,9 @@ body.home-upgrade .profile-picture img {
 
 body.home-upgrade .Home-Description {
     width: min(100%, 980px);
-    padding-top: clamp(18px, 3vw, 34px);
+    padding: clamp(18px, 3vw, 34px) 0 0;
     margin-inline: auto;
+    box-sizing: border-box;
 }
 
 body.home-upgrade .headline {
@@ -90,6 +91,8 @@ body.home-upgrade #demo-reel {
     min-height: auto;
     margin: 0 auto;
 	padding: clamp(42px, 6vw, 70px) 20px clamp(54px, 7vw, 84px);
+}
+
 body.home-upgrade .video-section {
     width: min(100%, 1040px);
     margin-inline: auto;
@@ -442,7 +445,8 @@ body.home-upgrade .video-section video {
 
     body.home-upgrade .home-focus,
     body.home-upgrade .home-preview {
-		padding: 42px 14px;
+		padding: 28px 14px;
+        gap: 20px;
 	}
 
     body.home-upgrade .focus-grid,
@@ -482,15 +486,16 @@ body.home-upgrade .video-section video {
     body.home-upgrade .home-content {
         width: 100% !important;
         max-width: 100% !important;
-        padding-top: 18px !important;
-        padding-bottom: 30px;
+        min-height: 100svh !important;
+        padding-top: 36px !important;
+        padding-bottom: 36px !important;
         padding-left: 20px !important;
         padding-right: 20px !important;
         margin: 0 auto !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        justify-content: flex-start !important;
+        justify-content: center !important;
         text-align: center !important;
         transform: none !important;
         box-sizing: border-box !important;
@@ -502,8 +507,8 @@ body.home-upgrade .video-section video {
     }
 
     body.home-upgrade .Home-Description {
-        padding-top: 16px;
-        width: min(100%, 330px) !important;
+        padding: 16px 0 0 !important;
+        width: 100% !important;
         max-width: 330px !important;
         margin: 0 auto !important;
         display: flex !important;
@@ -539,29 +544,51 @@ body.home-upgrade .video-section video {
 
     body.home-upgrade .home-tags {
         margin-top: 4px;
-        width: min(100%, 310px) !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, max-content);
+        width: min(calc(100vw - 32px), 290px) !important;
         margin-left: auto !important;
         margin-right: auto !important;
         justify-content: center !important;
+        align-self: center !important;
     }
 
     body.home-upgrade .home-buttons {
-        width: min(100%, 300px) !important;
+        width: 100% !important;
+        max-width: 300px !important;
         margin: 14px auto 0 !important;
         flex-direction: row !important;
         flex-wrap: wrap !important;
         align-items: center !important;
         justify-content: center !important;
         gap: 10px !important;
+        align-self: center !important;
+        box-sizing: border-box !important;
     }
 
     body.home-upgrade .home-tags {
-        gap: 8px;
+        gap: 7px;
     }
 
     body.home-upgrade .home-tags span {
-        font-size: 0.74rem;
-        padding: 6px 10px;
+        gap: 4px !important;
+        font-size: 0.6rem !important;
+        line-height: 1 !important;
+        min-height: 24px !important;
+        padding: 3px 6px !important;
+    }
+
+    body.home-upgrade .home-tags span img {
+        width: 10px !important;
+        height: 10px !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    body.home-upgrade .home-tags span:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
     }
 
     body.home-upgrade .home-buttons .connect-btn,
@@ -606,7 +633,7 @@ body.home-upgrade .video-section video {
     }
 
     body.home-upgrade #demo-reel {
-        padding-inline: 12px;
+        padding: 28px 12px 36px;
     }
 }
 
@@ -625,8 +652,30 @@ body.home-upgrade .video-section video {
     }
 
     body.home-upgrade .home-buttons {
-        width: min(100%, 278px) !important;
+        width: 100% !important;
+        max-width: 278px !important;
         gap: 8px !important;
+    }
+
+    body.home-upgrade .home-tags {
+        width: min(calc(100vw - 28px), 270px) !important;
+        gap: 7px !important;
+    }
+
+    body.home-upgrade .home-tags span {
+        gap: 4px !important;
+        font-size: 0.56rem !important;
+        line-height: 1 !important;
+        min-height: 24px !important;
+        padding: 3px 6px !important;
+    }
+
+    body.home-upgrade .home-tags span img {
+        width: 10px !important;
+        height: 10px !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-sizing: border-box !important;
     }
 
     body.home-upgrade .home-buttons .connect-btn,
@@ -637,5 +686,370 @@ body.home-upgrade .video-section video {
         min-height: 40px !important;
         font-size: 0.78rem !important;
         padding: 0 10px !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body.home-upgrade .hamburger {
+        top: 20px !important;
+        right: 20px !important;
+        width: 42px !important;
+        height: 42px !important;
+        padding: 12px !important;
+        border-radius: 14px !important;
+        justify-content: center !important;
+        gap: 4px !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        box-shadow: 0 14px 32px rgba(31, 87, 130, 0.16) !important;
+        transform: translateZ(0) scale(1) !important;
+        transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.34s ease, box-shadow 0.34s ease, border-color 0.34s ease !important;
+    }
+
+    body.home-upgrade .hamburger span {
+        transform-origin: center;
+        transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.24s ease, background-color 0.34s ease !important;
+    }
+
+    body.home-upgrade.menu-open .hamburger {
+        background: rgba(255, 255, 255, 0.94) !important;
+        transform: translateZ(0) scale(1.04) !important;
+    }
+
+    body.home-upgrade.menu-open .hamburger span {
+        background: #243447 !important;
+    }
+
+    body.home-upgrade .hamburger.active span:nth-child(2) {
+        opacity: 0 !important;
+        transform: scaleX(0) !important;
+    }
+
+    body.home-upgrade nav.sidebar,
+    body.home-upgrade nav.sidebar.active {
+        width: min(84vw, 330px) !important;
+        padding: 24px 20px 28px !important;
+        gap: 18px !important;
+        align-items: stretch !important;
+        background:
+            radial-gradient(circle at 100% 12%, rgba(185, 216, 250, 0.46), transparent 34%),
+            linear-gradient(180deg, #f7fbff 0%, #eaf4ff 100%) !important;
+        border-left: 1px solid rgba(34, 86, 128, 0.1) !important;
+        box-shadow: -18px 0 46px rgba(29, 54, 82, 0.16) !important;
+        transform: translateX(110%) !important;
+        transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.42s ease !important;
+    }
+
+    body.home-upgrade.menu-open nav.sidebar,
+    body.home-upgrade.menu-open nav.sidebar.active {
+        transform: translateX(0) !important;
+    }
+
+    body.home-upgrade nav.sidebar .logo,
+    body.home-upgrade.menu-open nav.sidebar .logo {
+        align-items: flex-start !important;
+        padding: 0 0 16px !important;
+        border-bottom: 1px solid rgba(34, 86, 128, 0.08) !important;
+    }
+
+    body.home-upgrade nav.sidebar .logo a {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-decoration: none !important;
+        width: 100% !important;
+        overflow: visible !important;
+    }
+
+    body.home-upgrade nav.sidebar .logo img,
+    body.home-upgrade.nav-scrolled nav.sidebar .logo img {
+        display: none !important;
+    }
+
+    body.home-upgrade nav.sidebar .logo a::before {
+        content: "JCM";
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 30px;
+        margin: 0 0 10px;
+        color: #152945;
+        font-family: "Montserrat", "Poppins", sans-serif;
+        font-size: 1.08rem;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+    }
+
+    body.home-upgrade nav.sidebar .logo a::after {
+        content: "John Benedict Misal";
+        display: block !important;
+        margin-top: 2px;
+        color: #172941;
+        font-family: "Montserrat", "Poppins", sans-serif;
+        font-size: 0.94rem;
+        font-weight: 800;
+        line-height: 1.15;
+    }
+
+    body.home-upgrade nav.sidebar .logo::after {
+        content: "BSIT Student\A UI/UX Designer • Web Developer\A Video Editor";
+        white-space: pre-line;
+        color: #6d8097;
+        font-size: 0.68rem;
+        font-weight: 600;
+        line-height: 1.55;
+    }
+
+    body.home-upgrade nav.sidebar .logo::after {
+        content: "BSIT Student\A UI/UX Designer - Web Developer\A Video Editor";
+    }
+
+    body.home-upgrade nav.sidebar .menu,
+    body.home-upgrade:not(.menu-open) nav.sidebar .menu,
+    body.home-upgrade.menu-open nav.sidebar .menu {
+        gap: 10px !important;
+        padding: 0 0 16px !important;
+        border-bottom: 1px solid rgba(34, 86, 128, 0.08) !important;
+    }
+
+    body.home-upgrade nav.sidebar .menu a,
+    body.home-upgrade .sidebar-connect a {
+        display: grid !important;
+        grid-template-columns: 34px 1fr 16px !important;
+        min-height: 48px !important;
+        padding: 0 12px !important;
+        border: 0 !important;
+        border-radius: 10px !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        color: #1f3047 !important;
+        font-size: 0.78rem !important;
+        font-weight: 800 !important;
+    }
+
+    body.home-upgrade nav.sidebar .menu a.active {
+        color: #1e63ff !important;
+        background: linear-gradient(90deg, rgba(233, 243, 255, 0.95), rgba(209, 226, 252, 0.76)) !important;
+        border: 1px solid rgba(91, 143, 255, 0.22) !important;
+    }
+
+    body.home-upgrade .sidebar-connect {
+        margin: 0 !important;
+        padding: 0 !important;
+        border-top: 0 !important;
+    }
+
+    body.home-upgrade .sidebar-connect a::before {
+        display: none !important;
+        content: none !important;
+    }
+
+    body.home-upgrade .sidebar-connect a span {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 28px !important;
+        height: 28px !important;
+        border-radius: 9px !important;
+        background: rgba(227, 239, 255, 0.9) !important;
+        border: 1px solid rgba(91, 143, 255, 0.16) !important;
+    }
+
+    body.home-upgrade .sidebar-connect p {
+        color: #8a9bb0 !important;
+        font-size: 0.64rem !important;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    html:has(body.home-upgrade.menu-open),
+    body.home-upgrade.menu-open {
+        overflow: hidden !important;
+        overscroll-behavior: none !important;
+    }
+
+    body.home-upgrade.menu-open {
+        touch-action: none;
+    }
+
+    body.home-upgrade::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 3050;
+        background: rgba(23, 41, 65, 0.14);
+        backdrop-filter: blur(3px) !important;
+        -webkit-backdrop-filter: blur(3px) !important;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.44s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    body.home-upgrade.menu-open::before {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    body.home-upgrade nav.sidebar,
+    body.home-upgrade nav.sidebar.active {
+        height: 100dvh !important;
+        min-height: 100dvh !important;
+        max-height: 100dvh !important;
+        padding: 20px 20px 34px !important;
+        gap: 12px !important;
+        justify-content: flex-start !important;
+        touch-action: auto;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: none !important;
+        transform: translate3d(112%, 0, 0) !important;
+        will-change: transform;
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease !important;
+    }
+
+    body.home-upgrade.menu-open nav.sidebar,
+    body.home-upgrade.menu-open nav.sidebar.active {
+        pointer-events: auto !important;
+        transform: translate3d(0, 0, 0) !important;
+    }
+
+    body.home-upgrade nav.sidebar .logo,
+    body.home-upgrade.menu-open nav.sidebar .logo {
+        padding: 0 0 12px !important;
+    }
+
+    body.home-upgrade nav.sidebar .logo a::before {
+        display: none !important;
+        content: none !important;
+    }
+
+    body.home-upgrade nav.sidebar .logo .menu-logo-img,
+    body.home-upgrade.nav-scrolled nav.sidebar .logo .menu-logo-img {
+        display: block !important;
+        position: static !important;
+        width: 96px !important;
+        height: 46px !important;
+        margin: 0 0 6px -3px !important;
+        object-fit: cover !important;
+        object-position: left center !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        transform: none !important;
+    }
+
+    body.home-upgrade nav.sidebar .logo a::after {
+        display: none !important;
+        content: none !important;
+    }
+
+    body.home-upgrade nav.sidebar .logo::after {
+        display: none !important;
+        content: none !important;
+    }
+
+    body.home-upgrade .menu-logo-copy {
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        color: #172941;
+        font-family: "Montserrat", "Poppins", sans-serif;
+        line-height: 1.22;
+    }
+
+    body.home-upgrade .menu-logo-copy strong {
+        font-size: 0.9rem;
+        font-weight: 800;
+    }
+
+    body.home-upgrade .menu-logo-copy span {
+        color: #6d8097;
+        font-size: 0.62rem;
+        font-weight: 700;
+    }
+
+    body.home-upgrade nav.sidebar .menu,
+    body.home-upgrade:not(.menu-open) nav.sidebar .menu,
+    body.home-upgrade.menu-open nav.sidebar .menu {
+        gap: 4px !important;
+        padding: 0 0 12px !important;
+    }
+
+    body.home-upgrade nav.sidebar .menu a,
+    body.home-upgrade .sidebar-connect a {
+        min-height: 42px !important;
+    }
+
+    body.home-upgrade .sidebar-connect {
+        flex: 1 1 auto !important;
+        gap: 3px !important;
+        min-height: 0;
+        padding-bottom: 10px !important;
+    }
+
+    body.home-upgrade .sidebar-connect p {
+        margin-bottom: 2px !important;
+    }
+
+    body.home-upgrade .sidebar-connect a {
+        min-height: 34px !important;
+        padding: 0 10px !important;
+    }
+
+    body.home-upgrade .sidebar-connect a span {
+        width: 24px !important;
+        height: 24px !important;
+        border-radius: 8px !important;
+    }
+
+    body.home-upgrade .sidebar-connect img {
+        width: 14px !important;
+        height: 14px !important;
+    }
+
+    body.home-upgrade .sidebar-connect .connect-arrow {
+        width: 12px !important;
+        height: 12px !important;
+    }
+
+    body.home-upgrade .sidebar-connect .menu-download-cv {
+        margin-top: 12px !important;
+        color: #1e63ff !important;
+        background: linear-gradient(90deg, rgba(233, 243, 255, 0.98), rgba(211, 228, 255, 0.88)) !important;
+        border: 1px solid rgba(91, 143, 255, 0.22) !important;
+    }
+
+    body.home-upgrade .sidebar-connect .menu-download-cv::before {
+        content: "" !important;
+        display: block !important;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -8px;
+        width: 100%;
+        height: 1px;
+        background: rgba(34, 86, 128, 0.11);
+        mask: none;
+        -webkit-mask: none;
+    }
+
+    body.home-upgrade .sidebar-connect .menu-download-cv {
+        position: relative;
+    }
+
+    body.home-upgrade .menu-rights {
+        margin: auto 0 0 !important;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-top: 1px solid rgba(34, 86, 128, 0.11);
+        color: #8a9bb0 !important;
+        font-family: "Montserrat", "Poppins", sans-serif !important;
+        font-size: 0.58rem !important;
+        font-weight: 700 !important;
+        line-height: 1.35;
+        text-align: left;
     }
 }

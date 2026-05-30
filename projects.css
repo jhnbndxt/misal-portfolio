@@ -1,6 +1,7 @@
 .projects-classic {
     width: 100%;
-    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: visible;
 }
 
 .projects-classic .motion-reveal {
@@ -9,7 +10,27 @@
 }
 
 .projects-classic #project-page {
-    padding-top: clamp(34px, 5vw, 72px);
+    padding-top: clamp(30px, 4.5vw, 64px);
+    margin-top: clamp(18px, 3vw, 42px);
+    margin-bottom: clamp(96px, 8vw, 140px);
+}
+
+.projects-classic #project-page > .project-buttons {
+    margin-top: clamp(24px, 3vw, 38px);
+    gap: 16px;
+}
+
+.projects-classic #project-page .project-buttons .connect-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-width: 150px;
+    min-height: 44px;
+    padding: 0 20px;
+    font-size: 0.9rem;
+    line-height: 1;
+    box-sizing: border-box;
 }
 
 .projects-classic .project-buttons a {
@@ -17,7 +38,7 @@
 }
 
 .projects-classic .gallery-section {
-    margin-top: clamp(92px, 10vw, 150px);
+    margin-top: clamp(82px, 9vw, 132px);
     scroll-margin-top: 110px;
 }
 
@@ -59,9 +80,13 @@
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     align-items: stretch;
     gap: 64px;
+    width: calc(100% + 96px);
+    margin-inline: -48px;
+    padding-inline: 48px;
     max-height: 12000px;
     opacity: 1;
     overflow: visible;
+    box-sizing: border-box;
     transform: translateY(0);
     transition:
         max-height 0.5s cubic-bezier(0.22, 1, 0.36, 1),
@@ -160,13 +185,15 @@
     max-height: 0;
     margin-top: 0 !important;
     opacity: 0;
-    overflow: hidden;
+    overflow-x: visible;
+    overflow-y: hidden;
     pointer-events: none;
     transform: translateY(12px);
 }
 
 .projects-classic .creative-project-group.is-filter-transitioning {
-    overflow: hidden;
+    overflow-x: visible;
+    overflow-y: hidden;
     will-change: max-height, opacity, transform;
 }
 
@@ -586,32 +613,80 @@
 
 .projects-classic .photo-card .project-btn,
 .projects-classic .video-card .project-btn {
-    min-width: 0;
-    padding-inline: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: auto;
+    min-width: 176px;
+    max-width: 100%;
+    min-height: 48px;
+    padding: 0 20px;
     font-size: 0.88rem;
+    line-height: 1;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.projects-classic .photo-card .project-btn::after,
+.projects-classic .video-card .project-btn::after {
+    content: "";
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+    background: url("https://api.iconify.design/lucide:arrow-up-right.svg?color=%23203448") center / contain no-repeat;
+}
+
+.projects-classic .photo-card .project-btn:hover::after,
+.projects-classic .video-card .project-btn:hover::after {
+    background-image: url("https://api.iconify.design/lucide:arrow-up-right.svg?color=%23134B70");
 }
 
 @media (max-width: 760px) {
+    .projects-classic #project-page {
+        padding-top: 22px;
+        margin-top: 0;
+        margin-bottom: 72px;
+    }
+
+    .projects-classic #project-page > .project-buttons {
+        margin-top: 24px;
+        gap: 12px;
+    }
+
+    .projects-classic #project-page .project-buttons .connect-btn {
+        min-width: 136px;
+        min-height: 40px;
+        padding: 0 14px;
+        font-size: 0.78rem;
+    }
+
     .projects-classic .photo-gallery,
     .projects-classic .video-gallery,
     .projects-classic .software-gallery,
     .projects-classic .creative-gallery {
-        width: min(100% - 32px, 420px);
-        padding: 28px 0;
+        width: min(100% - 40px, 360px);
+        padding: 22px 0;
+        justify-items: center;
+        overflow: visible;
     }
 
     .projects-classic .software-gallery {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 18px;
     }
 
     .projects-classic .creative-project-group {
         grid-template-columns: 1fr;
-        gap: 24px;
+        width: 100%;
+        margin-inline: 0;
+        padding-inline: 0;
+        gap: 18px;
+        justify-items: center;
     }
 
     .projects-classic .creative-project-group + .creative-project-group {
-        margin-top: 24px;
+        margin-top: 18px;
     }
 
     .projects-classic .creative-filter {
@@ -629,14 +704,18 @@
     }
 
     .projects-classic .gallery-section {
-        margin-top: 58px;
+        margin-top: 38px;
+        scroll-margin-top: 84px;
     }
 
     .projects-classic .photo-card,
     .projects-classic .video-card {
-        padding: 14px;
+        width: 100%;
+        max-width: 340px;
+        padding: 12px;
         border-radius: 14px;
         box-shadow: 0 14px 32px rgba(31, 87, 130, 0.11);
+        box-sizing: border-box;
     }
 
     .projects-classic .photo-card img,
@@ -699,27 +778,64 @@
     .projects-classic .video-card .project-buttons {
         margin-top: 12px;
         gap: 8px;
+        justify-content: center;
     }
 
     .projects-classic .photo-card .project-btn,
     .projects-classic .video-card .project-btn {
-        min-height: 38px;
-        padding-inline: 13px;
-        font-size: 0.76rem;
+        width: 136px;
+        min-height: 42px;
+        padding-inline: 12px;
+        font-size: 0.82rem;
+        gap: 6px;
+    }
+
+    .projects-classic .photo-card .project-btn::after,
+    .projects-classic .video-card .project-btn::after {
+        width: 14px;
+        height: 14px;
     }
 }
 
 @media (max-width: 425px) {
+    .projects-classic #project-page {
+        padding-top: 18px;
+        margin-top: 0;
+        margin-bottom: 62px;
+    }
+
+    .projects-classic #project-page > .project-buttons {
+        margin-top: 22px;
+        gap: 10px;
+    }
+
+    .projects-classic #project-page .project-buttons .connect-btn {
+        min-width: 128px;
+        min-height: 38px;
+        padding: 0 12px;
+        font-size: 0.74rem;
+    }
+
+    .projects-classic .gallery-section {
+        margin-top: 34px;
+    }
+
     .projects-classic .photo-gallery,
     .projects-classic .video-gallery,
     .projects-classic .software-gallery,
     .projects-classic .creative-gallery {
-        width: min(100% - 26px, 360px);
+        width: min(100% - 42px, 340px);
+        padding: 18px 0;
     }
 
     .projects-classic .photo-card,
     .projects-classic .video-card {
-        padding: 12px;
+        max-width: 320px;
+        padding: 10px;
+    }
+
+    .projects-classic .creative-filter {
+        width: min(100% - 42px, 340px);
     }
 }
 
