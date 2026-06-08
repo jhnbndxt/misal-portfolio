@@ -1054,3 +1054,202 @@ body.home-upgrade .video-section video {
         text-align: left;
     }
 }
+
+/* Use the shared navbar.css mobile drawer on the homepage too. */
+@media screen and (max-width: 1024px) {
+    body.home-upgrade nav.sidebar,
+    body.home-upgrade nav.sidebar.active {
+        width: min(84vw, 330px) !important;
+        height: 100dvh !important;
+        min-height: 100dvh !important;
+        max-height: 100dvh !important;
+        padding: 20px 20px 28px !important;
+        gap: 12px !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transform: translate3d(112%, 0, 0) !important;
+        transition: transform 0.48s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.18s ease 0.3s, visibility 0s linear 0.48s, box-shadow 0.48s ease !important;
+    }
+
+    body.home-upgrade.menu-open nav.sidebar,
+    body.home-upgrade.menu-open nav.sidebar.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: translate3d(0, 0, 0) !important;
+        transition: transform 0.48s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.18s ease, visibility 0s linear 0s, box-shadow 0.48s ease !important;
+    }
+
+    body.home-upgrade nav.sidebar .logo,
+    body.home-upgrade.menu-open nav.sidebar .logo {
+        padding: 0 0 10px !important;
+        border-bottom: 0 !important;
+    }
+
+    body.home-upgrade nav.sidebar .logo a {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        width: 100% !important;
+    }
+
+    body.home-upgrade nav.sidebar .logo a::before,
+    body.home-upgrade nav.sidebar .logo a::after,
+    body.home-upgrade nav.sidebar .logo::after {
+        display: none !important;
+        content: none !important;
+    }
+
+    body.home-upgrade nav.sidebar .logo .menu-logo-img,
+    body.home-upgrade.nav-scrolled nav.sidebar .logo .menu-logo-img {
+        display: block !important;
+        position: static !important;
+        width: 96px !important;
+        height: 46px !important;
+        margin: 0 0 6px -3px !important;
+        object-fit: cover !important;
+        object-position: left center !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        transform: none !important;
+    }
+
+    body.home-upgrade .menu-logo-copy {
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        color: #172941;
+        font-family: "Montserrat", "Poppins", sans-serif;
+        line-height: 1.22;
+    }
+
+    body.home-upgrade .menu-logo-copy strong {
+        font-size: 0.9rem;
+        font-weight: 800;
+    }
+
+    body.home-upgrade .menu-logo-copy span {
+        color: #6d8097;
+        font-size: 0.62rem;
+        font-weight: 700;
+    }
+
+    body.home-upgrade nav.sidebar .menu,
+    body.home-upgrade:not(.menu-open) nav.sidebar .menu,
+    body.home-upgrade.menu-open nav.sidebar .menu {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 6px !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 0 14px !important;
+        border: 0 !important;
+        border-bottom: 1px solid rgba(34, 86, 128, 0.08) !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        transform: none !important;
+    }
+
+    body.home-upgrade nav.sidebar .menu a,
+    body.home-upgrade .sidebar-connect a {
+        display: grid !important;
+        grid-template-columns: 34px 1fr 16px !important;
+        align-items: center !important;
+        min-height: 44px !important;
+        padding: 0 12px !important;
+        border: 0 !important;
+        border-radius: 10px !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        color: #1f3047 !important;
+        font-size: 0.78rem !important;
+        font-weight: 800 !important;
+    }
+
+    body.home-upgrade nav.sidebar .menu a.active {
+        color: #1e63ff !important;
+        background: linear-gradient(90deg, rgba(233, 243, 255, 0.95), rgba(209, 226, 252, 0.76)) !important;
+        border: 1px solid rgba(91, 143, 255, 0.22) !important;
+        box-shadow: 0 12px 28px rgba(91, 143, 255, 0.12) !important;
+    }
+
+    body.home-upgrade .sidebar-connect {
+        display: flex !important;
+        flex: 1 1 auto !important;
+        flex-direction: column !important;
+        gap: 6px !important;
+        width: 100% !important;
+        min-height: 0;
+        margin: 0 !important;
+        padding: 0 0 10px !important;
+        border-top: 0 !important;
+    }
+
+    body.home-upgrade .sidebar-connect p {
+        margin: 0 0 4px !important;
+        color: #8a9bb0 !important;
+        font-family: "Montserrat", "Poppins", sans-serif !important;
+        font-size: 0.64rem !important;
+        font-weight: 800 !important;
+        text-align: left !important;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    body.home-upgrade .sidebar-connect a span {
+        width: 24px !important;
+        height: 24px !important;
+        border-radius: 8px !important;
+    }
+
+    body.home-upgrade .sidebar-connect img {
+        width: 14px !important;
+        height: 14px !important;
+    }
+
+    body.home-upgrade .sidebar-connect .connect-arrow {
+        width: 12px !important;
+        height: 12px !important;
+    }
+
+    body.home-upgrade .sidebar-connect .menu-download-cv {
+        position: relative;
+        margin-top: 20px !important;
+        margin-bottom: 10px !important;
+        color: #1e63ff !important;
+        background: linear-gradient(90deg, rgba(233, 243, 255, 0.98), rgba(211, 228, 255, 0.88)) !important;
+        border: 1px solid rgba(91, 143, 255, 0.22) !important;
+    }
+
+    body.home-upgrade .sidebar-connect .menu-download-cv::before {
+        content: "" !important;
+        display: block !important;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -16px;
+        width: 100%;
+        height: 1px;
+        background: rgba(34, 86, 128, 0.11);
+        mask: none;
+        -webkit-mask: none;
+    }
+
+    body.home-upgrade .menu-rights {
+        margin: auto 0 0 !important;
+        padding-top: 10px;
+        padding-bottom: 6px;
+        border-top: 1px solid rgba(34, 86, 128, 0.11);
+        color: #8a9bb0 !important;
+        font-family: "Montserrat", "Poppins", sans-serif !important;
+        font-size: 0.58rem !important;
+        font-weight: 700 !important;
+        line-height: 1.35;
+        text-align: left;
+    }
+}
